@@ -6,19 +6,43 @@
     <title> Jabulani's Portfolio</title>
     <link href="dist/styles.css" rel="stylesheet">
 </head>
-<body class="bg-whitesmoke">
+<body class="bg-whitesmoke scroll-smooth">
     <header id="header1">
-        <section class="bg-slate-800">
+        <section id="header-text-box" class="bg-slate-800">
             <!-- the header name and profession + resume button -->
-            <div id="header-content" class="bg-slate-500 h-[85vh] w-full pt-[10%] pl-20" >
-                <h1 class="text-[40px] mb-5 font-semibold">Hello, I am</h1>
+            <div id="header-content" class="bg-slate-500 h-[88vh] w-full pt-[10%] pl-20" >
+                <h1 class="text-[40px] mb-5">Hello, I am</h1>
                     <div id="line-height">
                         <h1 class="text-[95px] font-bold leading-[35px]">Jabulani</h1>
                         <h1 class="text-[95px] font-bold">Kapherachoka</h1>
                     </div>
                 <p class="font-mono text-[22px]">Front-end Debeloper | Programmer in C++, Python etc.</p>
-
+                 <!-- print resume bttn -->
                 <button class="text-yellow-200 rounded-[25px] bg-orange-500 p-2 mt-4 hover:bg-orange-600 transition-all duration-500">Print Resume</button>
+            </div>
+
+            <!-- the portfolio navigation section -->
+            <div id="nav" class="h-[12vh] bg-slate-400 flex items-center">
+                <nav class="w-full flex justify-between items-center">
+                    <!-- Nav 1 (Left) -->
+                    <ul class="w-[30%] flex justify-around text-lg font-bold text-[20px]">
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Home</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">About</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Resume</a></li>
+                    </ul>
+            
+                    <!-- Image (Center) -->
+                    <div id="profile-img" class="border-8 border-black rounded-full w-[12%] h-[24vh] flex justify-center">
+                        <img src="src/imgs/happiness.png" alt="my-picture" class="h-full">
+                    </div>
+            
+                    <!-- Nav 2 (Right) -->
+                    <ul class="w-[30%] text-right flex justify-around text-lg font-bold text-[20px]">
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Portfolio</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Blog</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
     </header>
