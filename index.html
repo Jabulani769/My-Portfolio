@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/style.css">
     <title> Jabulani's Portfolio</title>
+    <link href="dist/styles.css" rel="stylesheet">
 </head>
 <body class="bg-whitesmoke">
     <header id="header1">
-        <section>
-            <h1>Hello, I am</h1>
-            <h1>Jabulani Kapherachoka</h1>
-            <p>Front-end Debeloper | Programmer</p>
+        <section class="bg-slate-800">
+            <!-- the header name and profession + resume button -->
+            <div id="header-content" class="bg-slate-500 h-[85vh] w-full pt-[10%] pl-20" >
+                <h1 class="text-[40px] mb-5 font-semibold">Hello, I am</h1>
+                    <div id="line-height">
+                        <h1 class="text-[95px] font-bold leading-[35px]">Jabulani</h1>
+                        <h1 class="text-[95px] font-bold">Kapherachoka</h1>
+                    </div>
+                <p class="font-mono text-[22px]">Front-end Debeloper | Programmer in C++, Python etc.</p>
+
+                <button class="text-yellow-200 rounded-[25px] bg-orange-500 p-2 mt-4 hover:bg-orange-600 transition-all duration-500">Print Resume</button>
+            </div>
         </section>
     </header>
 </body>
