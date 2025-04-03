@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Jabulani's Portfolio</title>
     <link href="dist/styles.css" rel="stylesheet">
 </head>
-<body class="bg-whitesmoke scroll-smooth">
+<body class="bg-slate-50">
     <header id="header1">
         <section id="header-text-box" class="bg-slate-800">
             <!-- the header name and profession + resume button -->
@@ -27,7 +27,7 @@
                     <!-- Nav 1 (Left) -->
                     <ul class="w-[30%] flex justify-around text-lg font-bold text-[20px]">
                         <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Home</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">About</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#about">About</a></li>
                         <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Resume</a></li>
                     </ul>
             
@@ -46,5 +46,45 @@
             </div>
         </section>
     </header>
+    <main id="main-content">
+        <section id="about" class="h-[65vh] border-2 border-green-400 flex">
+            <!-- who am i div -->
+            <div id="cont-1" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
+                <h2>Who am I ?</h2><hr class="w-6 border-orange-500 mt-1b"> <!--title of thr container-->
+                    <!-- container details -->
+                    <h3 class="text-[22px] pt-10 leading-[28px]">A Front-end Developer / Programmer in C and Python Located in Malawi, Blantyre.</h3>
+                    <p class="text-[14px] pt-4 text-black-100">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Degree in Business Management Information Systems.</p>
+                    
+                    <button class="text-[16px] text-orange-500 border-2 border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6">Download My CV</button>
+            </div>
+            <!-- personal information div -->
+            <div id="cont-2" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
+                <h2>Personal Info</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                    <!-- container details -->
+                    <p class="text-black-100 text-[14px] pt-10"><b>Birthdate :</b>16/05/2006</p>
+                    <p class="text-black-100 text-[14px] pt-3"><b>Email :</b>jabulanikbanda769@gmail.com</p>
+                    <p class="text-black-100 text-[14px] pt-3"><b>Phone :</b>+ (265) 889 430 469</p>
+                    <p class="text-black-100 text-[14px] pt-3"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
+
+                    <!-- social media icons in the persona; info div -->
+                    <div id="social-icons">
+                        <h1 class="ml-[30px] mt-16 bg-slate-400">ICONS SHOULD BE HERE</h1>
+                    </div>
+            </div>
+            <!-- my expertise div -->
+            <div id="cont-3" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
+                <h2>My Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                    <!-- container details -->
+                    <h3 class="text-[20px] pt-10">Web Developer</h3>
+                    <p class="text-[14px]">Front-end only HTML and CSS</p><hr class="mt-4">
+
+                    <h3 class="text-[20px] pt-4">Programmer</h3>
+                    <p class="text-[14px]">Python and C</p><hr class="mt-4">
+
+                    <h3 class="text-[20px] pt-4">Designer</h3>
+                    <p class="text-[14px]">Learnig to use Figma</p><hr class="mt-4">
+            </div>
+        </section>
+    </main>
 </body>
 </html>
