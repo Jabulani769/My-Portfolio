@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styling for range inputs */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb; /* Light gray background */
+    border-radius: 5px;
+    margin: 10px 0 20px 0;
+    outline: none;
+  }
+  
+  /* The track - the background */
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 5px;
+  }
+  
+  /* The thumb - the draggable button */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 15px;
+    background: #f97316; /* Orange to match your theme */
+    cursor: pointer;
+    margin-top: -4px; /* Centers the thumb on the track */
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #f97316;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Add colored fill to show skill level */
+  input[type="range"] {
+    background: linear-gradient(to right, #f97316 0%, #f97316 var(--range-progress), #e5e7eb var(--range-progress), #e5e7eb 100%);
+  }
+  
+  /* Set different values for each skill */
+  #html-range {
+    --range-progress: 90%;
+  }
+  
+  #css-range {
+    --range-progress: 90%;
+  }
+  
+  #python-range {
+    --range-progress: 50%;
+  }
+  
+  #c-range {
+    --range-progress: 70%;
+  }
+  
+  #c\\+\\+-range {
+    --range-progress: 20%;
+  }

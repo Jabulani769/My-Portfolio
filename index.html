@@ -6,34 +6,34 @@
     <title> Jabulani's Portfolio</title>
     <link href="dist/styles.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50">
+<body class="bg-[#f5f5f5]">
     <header id="header1">
-        <section id="header-text-box" class="bg-slate-800">
+        <section id="header-text-box" class="header-bg">
             <!-- the header name and profession + resume button -->
-            <div id="header-content" class="bg-slate-500 h-[88vh] w-full pt-[10%] pl-20" >
-                <h1 class="text-[40px] mb-5">Hello, I am</h1>
+            <div id="header-content" class="bg-[url('../src/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20">
                     <div id="line-height">
-                        <h1 class="text-[95px] font-bold leading-[35px]">Jabulani</h1>
-                        <h1 class="text-[95px] font-bold">Kapherachoka</h1>
+                        <h1 class="text-[95px] text-white font-bold leading-[35px]">Jabulani</h1>
+                        <h1 class="text-[95px] text-white font-bold">Kapherachoka</h1>
                     </div>
-                <p class="font-mono text-[22px]">Front-end Debeloper | Programmer in C++, Python etc.</p>
+                <p class="font-mono text-[22px] text-white ">Front-end Debeloper | Programmer in C++, Python etc.</p>
                  <!-- print resume bttn -->
                 <button class="text-yellow-200 rounded-[25px] bg-orange-500 p-2 mt-4 hover:bg-orange-600 transition-all duration-500">Print Resume</button>
             </div>
 
             <!-- the portfolio navigation section -->
-            <div id="nav" class="h-[12vh] bg-slate-400 flex items-center">
+            <div id="nav" class="h-[12vh] flex items-center shadow-bottom-shadow">
                 <nav class="w-full flex justify-between items-center">
                     <!-- Nav 1 (Left) -->
                     <ul class="w-[30%] flex justify-around text-lg font-bold text-[20px]">
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Home</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#header1">Home</a></li>
                         <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#about">About</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#">Resume</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#my-resume">Resume</a></li>
                     </ul>
             
                     <!-- Image (Center) -->
-                    <div id="profile-img" class="border-8 border-black rounded-full w-[12%] h-[24vh] flex justify-center">
-                        <img src="src/imgs/happiness.png" alt="my-picture" class="h-full">
+                    <div id="profile-img" class="border-[10px] border-[#f5f5f5] shadow-image-shadow rounded-full w-[14%] h-[28vh] flex justify-center relative">
+                        <!-- <div class="absolute inset-0 rounded-full shadow-custom-bottom"></div> -->
+                        <img src="src/imgs/my-pic.JPG" alt="my-picture" class="h-full rounded-full w-full relative z-10">
                     </div>
             
                     <!-- Nav 2 (Right) -->
@@ -47,43 +47,117 @@
         </section>
     </header>
     <main id="main-content">
-        <section id="about" class="h-[65vh] border-2 border-green-400 flex">
+        <section id="about" class="h-[68vh] flex">
             <!-- who am i div -->
-            <div id="cont-1" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
-                <h2>Who am I ?</h2><hr class="w-6 border-orange-500 mt-1b"> <!--title of thr container-->
+            <div id="cont-1" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2">
+                <h2>Who am I ?</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
                     <!-- container details -->
                     <h3 class="text-[22px] pt-10 leading-[28px]">A Front-end Developer / Programmer in C and Python Located in Malawi, Blantyre.</h3>
-                    <p class="text-[14px] pt-4 text-black-100">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Degree in Business Management Information Systems.</p>
+                    <p class="text-[14px] pt-4 text-[#353434cb]">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Degree in Business Management Information Systems.</p>
                     
-                    <button class="text-[16px] text-orange-500 border-2 border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6">Download My CV</button>
+                    <button class="text-[16px] text-orange-500 border-[1px] border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6">Download My CV</button>
             </div>
             <!-- personal information div -->
-            <div id="cont-2" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
+            <div id="cont-2" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-l-2 border-r-2 border-b-2">
                 <h2>Personal Info</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
                     <!-- container details -->
-                    <p class="text-black-100 text-[14px] pt-10"><b>Birthdate :</b>16/05/2006</p>
-                    <p class="text-black-100 text-[14px] pt-3"><b>Email :</b>jabulanikbanda769@gmail.com</p>
-                    <p class="text-black-100 text-[14px] pt-3"><b>Phone :</b>+ (265) 889 430 469</p>
-                    <p class="text-black-100 text-[14px] pt-3"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
+                    <p class="text-[#353434cb] text-[14px] pt-10"><b>Birthdate :</b>16/05/2006</p>
+                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Email :</b>jabulanikbanda769@gmail.com</p>
+                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Phone :</b>+ (265) 889 430 469</p>
+                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
 
                     <!-- social media icons in the persona; info div -->
-                    <div id="social-icons">
-                        <h1 class="ml-[30px] mt-16 bg-slate-400">ICONS SHOULD BE HERE</h1>
+                    <!-- Add this to your <head> section -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+                    <!-- Replace your social icons placeholder with this -->
+                    <div id="social-icons" class="flex mt-6 gap-8">
+                        <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-700 hover:text-orange-500 transition-colors ">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/Jabulani769" class="text-gray-700 hover:text-orange-500 transition-colors">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="text-gray-700 hover:text-orange-500 transition-colors">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jabulanikapherachoka?igsh=MW9pdWIzZ3QzdDgyNw==" class="text-gray-700 hover:text-orange-500 transition-colors">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
                     </div>
-            </div>
-            <!-- my expertise div -->
-            <div id="cont-3" class="border-2 border-yellow-500 w-[33.33%] py-16 p-10 text-[1.8rem]">
-                <h2>My Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
-                    <!-- container details -->
-                    <h3 class="text-[20px] pt-10">Web Developer</h3>
-                    <p class="text-[14px]">Front-end only HTML and CSS</p><hr class="mt-4">
+                </div>
+                <!-- my expertise div -->
+                <div id="cont-3" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2">
+                    <h2>My Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                        <!-- container details -->
+                        <h3 class="text-[20px] pt-10">Web Developer</h3>
+                        <p class="text-[14px] text-[#353434cb]">Front-end only HTML and CSS</p><hr class="mt-4 border-orange-500">
 
-                    <h3 class="text-[20px] pt-4">Programmer</h3>
-                    <p class="text-[14px]">Python and C</p><hr class="mt-4">
+                        <h3 class="text-[20px] pt-4">Programmer</h3>
+                        <p class="text-[14px] text-[#353434cb]">Python and C</p><hr class="mt-4 border-orange-500">
 
-                    <h3 class="text-[20px] pt-4">Designer</h3>
-                    <p class="text-[14px]">Learnig to use Figma</p><hr class="mt-4">
-            </div>
+                        <h3 class="text-[20px] pt-4">Designer</h3>
+                        <p class="text-[14px] text-[#353434cb]">Learnig to use Figma</p><hr class="mt-4 border-orange-500">
+                </div>
+            </section>
+
+            <section id="my-resume" class="h-[100vh] w-full p-3">
+                <h1 class="text-[35px] pt-10 pl-10 pb-6"><span class="text-orange-500">My </span>Resume</h1>
+                    <!-- main container for my-resume sub container -->
+                    <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around">
+                        <!-- my resume sub cotainers -->
+                        <div class="w-[30%] h-full border-2 p-4 text-[25px]">
+                            <h2>Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                            <div id="details" class="border-b-2 h-[28vh]">
+                                <h2  class="text-[25px] text-orange-500 mt-6">2023 - 2024</h2>
+                                <p class="text-[14px] text-[#353434cb] pb-4">Front-end Developer</p>
+                                <p class="text-[14px] text-[#353434cb]">At Malawi Collage of Accountancy after a year I became a Front-end developer. I had mastered HTML and CSS at that moment.</p>
+                            </div>
+
+                                <div id="details" class="h-[28vh]">
+                                    <h2 class="tetx-[25px] text-orange-500 mt-6">2023</h2>
+                                    <p class="text-[14px] text-[#353434cb] pb-4">ICT Basics</p>
+                                    <p class="text-[14px] text-[#353434cb]">Went to Sanwecka where I acquired a certificate in Information Communication Technilogy (ICT) basics. Additionally, gained experience on how to use Microsft Office Package.</p>
+                                </div>
+                            </div>
+
+                    <div class="w-[30%] border-2 p-4 text-[25px]">
+                        <h2>Education</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                        <div id="details" class="border-b-2 h-[28vh]">
+                            <h2 class="text-orange-500 mt-6">2023 - Present</h2>
+                            <p class="text-[14px] text-[#353434cb] pb-4">Bachelors Degree in Management Information Systems</p>
+                            <p class="text-[14px] text-[#353434cb]">At Malawi Collage of Accountancy (MCA), did a Degree in Business Management Information Systems.</p>
+    
+                        </div>
+ 
+                        <div id="details" class="h-[28vh]">
+                            <h2 class="text-orange-500 mt-6">2020 - 2023</h2>
+                            <p class="text-[14px] text-[#353434cb] pb-4">Secondary School Certificate</p>
+                            <p class="text-[14px] text-[#353434cb]">Started and finished my secondary school at FOMO Independent Secondary School. Located in Mulanje, Malawi.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="w-[30%] border-2  p-4 text-[25px]">
+                        <h2>Skills</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                        <div id="details" class="mt-6">
+                            <label for="html" class="text-[22px] text-[#353434cb]">HTML</label>
+                            <input type="range" name="html" id="html-range" value="90" disabled> <br>
+
+                            <label for="css" class="text-[22px] text-[#353434cb]">CSS</label>
+                            <input type="range" name="css" id="css-range" value="90" disabled>
+
+                            <label for="python" class="text-[22px] text-[#353434cb]">Python</label>
+                            <input type="range" name="python" id="python-range" value="50" disabled>
+
+                            <label for="c" class="text-[22px] text-[#353434cb]">C</label>
+                            <input type="range" name="c" id="c-range" value="70" disabled>
+
+                            <label for="c++" class="text-[22px] text-[#353434cb]">C++</label>
+                            <input type="range" name="c++" id="c++-range" value="20" disabled>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
 </body>
