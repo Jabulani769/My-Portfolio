@@ -40,9 +40,9 @@
             
                     <!-- Nav 2 (Right) -->
                     <ul class="w-[30%] text-right flex justify-around text-lg font-bold text-[20px]">
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Portfolio</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Blog</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#">Contact</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer" onclick="alert('Portfolio not yet implemented!')"><a href="#">Portfolio</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer" onclick="alert('Blog not yet implemented!')"><a href="#">Blog</a></li>
+                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#contact-me">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -202,6 +202,32 @@
                 </div>
             </div>
         </section>
+
+        <!-- contact me section  -->
+         <section id="contact-me" class="h-[80vh] flex justify-center">
+            <div class="w-[50%] p-4">
+                <h2 class="text-[25px]">Send a message</h2> <hr class="w-6 border-orange-500 mt-1 pb-4">
+                <form action="https://formspree.io/f/xldjopqw" method="POST">
+                    <input type="text" name="Name" placeholder="Name" class="mt-4 w-[90%] h-10 rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5]"> <br><br>
+                    <input type="email" name="Email" placeholder="Email"  class="w-[90%] h-10 rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5]"> <br><br>
+                    <textarea name="Message" id="textbox" class="w-[90%] rounded-md h-52 border-2 outline-orange-500 pl-3 pr-3 pt-1 bg-[#f5f5f5]"></textarea> <br><br>
+
+                    <button class="text-white bg-orange-500 w-[90%] py-2 rounded-md hover:bg-orange-600 transition-all duration-[0.5s]">Send Message</button>
+                </form>
+            </div>
+            <div class="p-4">
+                <h2 class="text-[25px]">Get in touch</h2> <hr class="w-6 border-orange-500 mt-1 pb-4">
+
+                <h3 class="mt-4">Phone:</h3>
+                <p class="text-[14px] text-[#353434cb]">+(265) 889 430 469</p>
+
+                <h3 class="pt-4">Address:</h3>
+                <p class="text-[14px] text-[#353434cb]">Naperi, Blantyre, Malawi</p>
+
+                <h3 class="pt-4">Email:</h3>
+                <p class="text-[14px] text-[#353434cb]">jabulanikbanda769@gmail.com</p>
+             </div>
+         </section>
     </main>
 </body>
 </html>
