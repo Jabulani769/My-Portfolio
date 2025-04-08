@@ -12,146 +12,149 @@
     <header id="header1">
         <section id="header-text-box" class="header-bg">
             <!-- the header name and profession + resume button -->
-            <div id="header-content" class="bg-[url('../src/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20">
+            <div id="header-content" class="header-content-bg">
                     <div id="line-height">
-                        <h1 class="text-[95px] text-white font-bold leading-[35px]">Jabulani</h1>
-                        <h1 class="text-[95px] text-white font-bold">Kapherachoka</h1>
+                        <h1 class="name-h leading-[35px]">Jabulani</h1>
+                        <h1 class="name-h">Kapherachoka</h1>
                     </div>
-                <p class="font-mono text-[22px] text-white ">Front-end Debeloper | Programmer in C++, Python etc.</p>
+                <p class="name-p">Front-end Debeloper | Programmer in C++, Python etc.</p>
                  <!-- print resume bttn -->
-                <button class="text-yellow-200 rounded-[25px] bg-orange-500 p-2 mt-4 hover:bg-orange-600 transition-all duration-500">Print Resume</button>
+                <button class="name-btn" onclick="alert('Not yet attached')">Print Resume</button>
             </div>
 
             <!-- the portfolio navigation section -->
             <div id="nav" class="h-[12vh] flex items-center shadow-bottom-shadow">
                 <nav class="w-full flex justify-between items-center">
                     <!-- Nav 1 (Left) -->
-                    <ul class="w-[30%] flex justify-around text-lg font-bold text-[20px]">
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#header1">Home</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#about">About</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer"><a href="#my-resume">Resume</a></li>
+                    <ul class="ul-styles">
+                        <li class="list-styles"><a href="#header1">Home</a></li>
+                        <li class="list-styles"><a href="#about">About</a></li>
+                        <li class="list-styles"><a href="#my-resume">Resume</a></li>
                     </ul>
             
                     <!-- Image (Center) -->
-                    <div id="profile-img" class="border-[10px] border-[#f5f5f5] shadow-image-shadow rounded-full w-[14%] h-[28vh] flex justify-center relative">
-                        <!-- <div class="absolute inset-0 rounded-full shadow-custom-bottom"></div> -->
-                        <img src="src/imgs/my-pic.JPG" alt="my-picture" class="h-full rounded-full w-full relative z-10">
+                    <div id="profile-img" class="profile-styles">
+                        <img src="src/imgs/my-pic.JPG" alt="my-picture" class="p-image">
                     </div>
             
                     <!-- Nav 2 (Right) -->
-                    <ul class="w-[30%] text-right flex justify-around text-lg font-bold text-[20px]">
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer" onclick="alert('Portfolio not yet implemented!')"><a href="#">Portfolio</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer" onclick="alert('Blog not yet implemented!')"><a href="#">Blog</a></li>
-                        <li class="text-gray-700 hover:text-gray-600 cursor-pointer"><a href="#contact-me">Contact</a></li>
+                    <ul class="text-right ul-styles">
+                        <li class="list-styles" onclick="alert('Portfolio not yet implemented!')"><a href="#">Portfolio</a></li>
+                        <li class="list-styles" onclick="alert('Blog not yet implemented!')"><a href="#">Blog</a></li>
+                        <li class="list-styles"><a href="#contact-me">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </section>
     </header>
+
+    <!-- the main content of the portfolio -->
     <main id="main-content">
         <section id="about" class="h-[68vh] flex">
-            <!-- who am i div -->
-            <div id="cont-1" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2">
-                <h2>Who am I ?</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+            <!-- di 1-->
+            <div id="cont-1" class="about-containers">
+                <h2>Who am I ?</h2><hr class="about-h"> <!--title of thr container-->
                     <!-- container details -->
                     <h3 class="text-[22px] pt-10 leading-[28px]">A Front-end Developer / Programmer in C and Python Located in Malawi, Blantyre.</h3>
-                    <p class="text-[14px] pt-4 text-[#353434cb]">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Degree in Business Management Information Systems.</p>
+                    <p class="normal-p pt-4">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Degree in Business Management Information Systems.</p>
                     
-                    <button class="text-[16px] text-orange-500 border-[1px] border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6">Download My CV</button>
+                    <button class="cv-btn" onclick="alert('Not yet attached')">Download My CV</button>
             </div>
-            <!-- personal information div -->
-            <div id="cont-2" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-l-2 border-r-2 border-b-2">
-                <h2>Personal Info</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+
+            <!--div 2 -->
+            <div id="cont-2" class="about-containers border-l-2 border-r-2 ">
+                <h2>Personal Info</h2><hr class="about-h"> <!--title of thr container-->
                     <!-- container details -->
-                    <p class="text-[#353434cb] text-[14px] pt-10"><b>Birthdate :</b>16/05/2006</p>
-                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Email :</b>jabulanikbanda769@gmail.com</p>
-                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Phone :</b>+ (265) 889 430 469</p>
-                    <p class="text-[#353434cb] text-[14px] pt-3"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
+                    <p class="normal-p pt-10"><b>Birthdate :</b>16/05/2006</p>
+                    <p class="normal-p pt-3"><b>Email :</b>jabulanikbanda769@gmail.com</p>
+                    <p class="normal-p pt-3"><b>Phone :</b>+ (265) 889 430 469</p>
+                    <p class="normal-p pt-3"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
 
                     <!-- social media icons in the persona; info div -->
                     <div id="social-icons" class="flex mt-6 gap-8">
-                        <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-700 hover:text-orange-500 transition-colors ">
+                        <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icons ">
                             <i class="fab fa-linkedin fa-2x"></i>
                         </a>
-                        <a href="https://github.com/Jabulani769" class="text-gray-700 hover:text-orange-500 transition-colors">
+                        <a href="https://github.com/Jabulani769" class="social-icons">
                             <i class="fab fa-github fa-2x"></i>
                         </a>
-                        <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="text-gray-700 hover:text-orange-500 transition-colors">
+                        <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="social-icons">
                             <i class="fab fa-whatsapp fa-2x"></i>
                         </a>
-                        <a href="https://www.instagram.com/jabulanikapherachoka?igsh=MW9pdWIzZ3QzdDgyNw==" class="text-gray-700 hover:text-orange-500 transition-colors">
+                        <a href="https://www.instagram.com/jabulanikapherachoka?igsh=MW9pdWIzZ3QzdDgyNw==" class="social-icons">
                             <i class="fab fa-instagram fa-2x"></i>
                         </a>
                     </div>
                 </div>
-                <!-- my expertise div -->
-                <div id="cont-3" class="w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2">
-                    <h2>My Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+
+                <!-- div 3-->
+                <div id="cont-3" class="about-containers">
+                    <h2>My Expertise</h2><hr class="about-h"> <!--title of thr container-->
                         <!-- container details -->
                         <h3 class="text-[20px] pt-10">Web Developer</h3>
-                        <p class="text-[14px] text-[#353434cb]">Front-end only HTML and CSS</p><hr class="mt-4 border-orange-500">
+                        <p class="normal-p  ">Front-end only HTML and CSS</p><hr class="mt-4 border-orange-500">
 
                         <h3 class="text-[20px] pt-4">Programmer</h3>
-                        <p class="text-[14px] text-[#353434cb]">Python and C</p><hr class="mt-4 border-orange-500">
+                        <p class="normal-p  ">Python and C</p><hr class="mt-4 border-orange-500">
 
                         <h3 class="text-[20px] pt-4">Designer</h3>
-                        <p class="text-[14px] text-[#353434cb]">Learnig to use Figma</p><hr class="mt-4 border-orange-500">
+                        <p class="normal-p  ">Learnig to use Figma</p><hr class="mt-4 border-orange-500">
                 </div>
             </section>
 
-            <section id="my-resume" class="h-[100vh] w-full p-3">
+            <section id="my-resume" class="h-full w-full p-3">
                 <h1 class="text-[35px] pt-10 pl-10 pb-6"><span class="text-orange-500">My </span>Resume</h1>
                     <!-- main container for my-resume sub container -->
                     <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around">
                         <!-- my resume sub cotainers -->
-                        <div class="w-[30%] h-full border-2 p-4 text-[25px]">
-                            <h2>Expertise</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
-                            <div id="details" class="border-b-2 h-[28vh]">
-                                <h2  class="text-[25px] text-orange-500 mt-6">2023 - 2024</h2>
-                                <p class="text-[14px] text-[#353434cb] pb-4">Front-end Developer</p>
-                                <p class="text-[14px] text-[#353434cb]">At Malawi Collage of Accountancy after a year I became a Front-end developer. I had mastered HTML and CSS at that moment.</p>
+                        <div class="resume-divs h-full">
+                            <h2>Expertise</h2><hr class="hr"> <!--title of thr container-->
+                            <div id="details" class="details-div">
+                                <h2  class="resume-h2">2023 - 2024</h2>
+                                <p class="normal-p r-pb">Front-end Developer</p>
+                                <p class="normal-p">At Malawi Collage of Accountancy after a year I became a Front-end developer. I had mastered HTML and CSS at that moment.</p>
                             </div>
 
                                 <div id="details" class="h-[28vh]">
-                                    <h2 class="tetx-[25px] text-orange-500 mt-6">2023</h2>
-                                    <p class="text-[14px] text-[#353434cb] pb-4">ICT Basics</p>
-                                    <p class="text-[14px] text-[#353434cb]">Went to Sanwecka where I acquired a certificate in Information Communication Technilogy (ICT) basics. Additionally, gained experience on how to use Microsft Office Package.</p>
+                                    <h2 class="resume-h2">2023</h2>
+                                    <p class="normal-p r-pb">ICT Basics</p>
+                                    <p class="normal-p">Went to Sanwecka where I acquired a certificate in Information Communication Technilogy (ICT) basics. Additionally, gained experience on how to use Microsft Office Package.</p>
                                 </div>
                             </div>
 
-                    <div class="w-[30%] border-2 p-4 text-[25px]">
-                        <h2>Education</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
-                        <div id="details" class="border-b-2 h-[28vh]">
-                            <h2 class="text-orange-500 mt-6">2023 - Present</h2>
-                            <p class="text-[14px] text-[#353434cb] pb-4">Bachelors Degree in Management Information Systems</p>
-                            <p class="text-[14px] text-[#353434cb]">At Malawi Collage of Accountancy (MCA), did a Degree in Business Management Information Systems.</p>
+                    <div class="resume-divs">
+                        <h2>Education</h2><hr class="hr"> <!--title of thr container-->
+                        <div id="details" class="details-div">
+                            <h2 class="resume-h2">2023 - Present</h2>
+                            <p class="normal-p r-pb">Bachelors Degree in Management Information Systems</p>
+                            <p class="normal-p">At Malawi Collage of Accountancy (MCA), did a Degree in Business Management Information Systems.</p>
     
                         </div>
  
                         <div id="details" class="h-[28vh]">
-                            <h2 class="text-orange-500 mt-6">2020 - 2023</h2>
-                            <p class="text-[14px] text-[#353434cb] pb-4">Secondary School Certificate</p>
-                            <p class="text-[14px] text-[#353434cb]">Started and finished my secondary school at FOMO Independent Secondary School. Located in Mulanje, Malawi.</p>
+                            <h2 class="resume-h2">2020 - 2023</h2>
+                            <p class="normal-p r-pb">Secondary School Certificate</p>
+                            <p class="normal-p">Started and finished my secondary school at FOMO Independent Secondary School. Located in Mulanje, Malawi.</p>
                         </div>
 
                     </div>
 
-                    <div class="w-[30%] border-2  p-4 text-[25px]">
-                        <h2>Skills</h2><hr class="w-6 border-orange-500 mt-1"> <!--title of thr container-->
+                    <div class="resume-divs">
+                        <h2>Skills</h2><hr class="hr"> <!--title of thr container-->
                         <div id="details" class="mt-6">
-                            <label for="html" class="text-[22px] text-[#353434cb]">HTML</label>
+                            <label for="html" class="label">HTML</label>
                             <input type="range" name="html" id="html-range" value="90" disabled> <br>
 
-                            <label for="css" class="text-[22px] text-[#353434cb]">CSS</label>
+                            <label for="css" class="label">CSS</label>
                             <input type="range" name="css" id="css-range" value="90" disabled>
 
-                            <label for="python" class="text-[22px] text-[#353434cb]">Python</label>
+                            <label for="python" class="label">Python</label>
                             <input type="range" name="python" id="python-range" value="50" disabled>
 
-                            <label for="c" class="text-[22px] text-[#353434cb]">C</label>
+                            <label for="c" class="label">C</label>
                             <input type="range" name="c" id="c-range" value="70" disabled>
 
-                            <label for="c++" class="text-[22px] text-[#353434cb]">C++</label>
+                            <label for="c++" class="label">C++</label>
                             <input type="range" name="c++" id="c++-range" value="20" disabled>
                         </div>
                     </div>
@@ -159,46 +162,46 @@
         </section>
 
         <!-- summary bar of the activities and projects -->
-        <section id="summary-bar" class="h-[40vh] w-full bg-gray-800 my-16 flex gap-4 p-4">
+        <section id="summary-bar" class="summary-bar-styles">
             <!-- the sub container of the summary bar that holds the icons and the text (4 divs) -->
-            <div class="w-[30%] p-10 flex">
-                <!-- div1 -->
-                <div class="w-[45%] h-full border-r-2 flex justify-center">
-                    <i class="fa-solid fa-stopwatch text-gray-300 text-[70px] pt-6"></i>
+            <!-- div1 -->
+            <div class="act-sub-cont">
+                <div class="activity-divs-icon">
+                    <i class="fa-solid fa-stopwatch act-icon-styles"></i>
                 </div>
                 <div class="w-[55%] h-full">
-                    <h1 class="text-orange-500 pl-2 pt-4 font-bold text-[40px]">200</h1>
-                    <p class="text-gray-300 text-[15px] pl-2">Hours Worked</p>
+                    <h1 class="act-h1">200</h1>
+                    <p class="act-p">Hours Worked</p>
                 </div>
             </div>
             <!-- div2 -->
-            <div class="w-[30%] p-10 flex">
-                <div class="w-[45%] h-full border-r-2 flex justify-center">
-                    <i class="fa-solid fa-list-check text-gray-300 text-[70px] pt-6"></i>
+            <div class="act-sub-cont">
+                <div class="activity-divs-icon">
+                    <i class="fa-solid fa-list-check act-icon-styles"></i>
                 </div>
                 <div class="w-[55%] h-full">
-                    <h1 class="text-orange-500 pl-2 pt-4 font-bold text-[40px]">2</h1>
-                    <p class="text-gray-300 text-[15px] pl-2">Projects Finished</p> 
+                    <h1 class="act-h1">2</h1>
+                    <p class="act-p">Projects Finished</p> 
                 </div>
             </div>
             <!-- div3 -->
-            <div class="w-[30%] p-10 flex">
-                <div class="w-[45%] h-full border-r-2 flex justify-center">
-                    <i class="fa-solid fa-face-smile-beam text-gray-300 text-[70px] pt-6"></i>
+            <div class="act-sub-cont">
+                <div class="activity-divs-icon">
+                    <i class="fa-solid fa-face-smile-beam act-icon-styles"></i>
                 </div>
                 <div class="w-[55%] h-full">
-                    <h1 class="text-orange-500 pl-2 pt-4 font-bold text-[40px]">0</h1>
-                    <p class="text-gray-300 text-[15px] pl-2">Happy Clients</p>
+                    <h1 class="act-h1">0</h1>
+                    <p class="act-p">Happy Clients</p>
                 </div>
             </div>
             <!-- div4 -->
-            <div class="w-[30%] p-10 flex">
-                <div class="w-[45%] h-full flex border-r-2 justify-center">
-                    <i class="fa-solid fa-mug-hot text-gray-300 text-[70px] pt-6"></i>
+            <div class="act-sub-cont">
+                <div class="activity-divs-icon">
+                    <i class="fa-solid fa-mug-hot act-icon-styles"></i>
                 </div>
                 <div class="w-[55%] h-full">
-                    <h1 class="text-orange-500 pl-2 pt-4 font-bold text-[40px]">10</h1>
-                    <p class="text-gray-300 text-[15px] pl-2">Coffee Drinked</p>
+                    <h1 class="act-h1">10</h1>
+                    <p class="act-p">Coffee Drinked</p>
                 </div>
             </div>
         </section>
@@ -206,26 +209,27 @@
         <!-- contact me section  -->
          <section id="contact-me" class="h-[80vh] flex justify-center">
             <div class="w-[50%] p-4">
-                <h2 class="text-[25px]">Send a message</h2> <hr class="w-6 border-orange-500 mt-1 pb-4">
+                <h2 class="contact-h2">Send a message</h2> <hr class="hr-contact">
+                <!-- active form -->
                 <form action="https://formspree.io/f/xldjopqw" method="POST">
-                    <input type="text" name="Name" placeholder="Name" class="mt-4 w-[90%] h-10 rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5]"> <br><br>
-                    <input type="email" name="Email" placeholder="Email"  class="w-[90%] h-10 rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5]"> <br><br>
-                    <textarea name="Message" id="textbox" class="w-[90%] rounded-md h-52 border-2 outline-orange-500 pl-3 pr-3 pt-1 bg-[#f5f5f5]"></textarea> <br><br>
+                    <input type="text" name="Name" placeholder="Name" class="mt-4 h-10 g-form-styles"> <br><br>
+                    <input type="email" name="Email" placeholder="Email"  class="h-10 g-form-styles"> <br><br>
+                    <textarea name="Message" id="textbox" class=" pt-1 h-52 g-form-styles"></textarea> <br><br>
 
-                    <button class="text-white bg-orange-500 w-[90%] py-2 rounded-md hover:bg-orange-600 transition-all duration-[0.5s]">Send Message</button>
+                    <button class="send-btn">Send Message</button>
                 </form>
             </div>
             <div class="p-4">
-                <h2 class="text-[25px]">Get in touch</h2> <hr class="w-6 border-orange-500 mt-1 pb-4">
+                <h2 class="contact-h2">Get in touch</h2> <hr class="hr-contact">
 
                 <h3 class="mt-4">Phone:</h3>
-                <p class="text-[14px] text-[#353434cb]">+(265) 889 430 469</p>
+                <p class="normal-p">+(265) 889 430 469</p>
 
                 <h3 class="pt-4">Address:</h3>
-                <p class="text-[14px] text-[#353434cb]">Naperi, Blantyre, Malawi</p>
+                <p class="normal-p">Naperi, Blantyre, Malawi</p>
 
                 <h3 class="pt-4">Email:</h3>
-                <p class="text-[14px] text-[#353434cb]">jabulanikbanda769@gmail.com</p>
+                <p class="normal-p">jabulanikbanda769@gmail.com</p>
              </div>
          </section>
     </main>

@@ -4,72 +4,160 @@
 
 /* Custom styling for range inputs */
 input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 8px;
-    background: #e5e7eb; /* Light gray background */
-    border-radius: 5px;
-    margin: 10px 0 20px 0;
-    outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  margin: 10px 0 20px 0;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #f97316;
+  cursor: pointer;
+  margin-top: -4px;
+}
+
+input[type="range"] {
+  background: linear-gradient(to right, #f97316 0%, #f97316 var(--range-progress), #e5e7eb var(--range-progress), #e5e7eb 100%);
+}
+
+#html-range { --range-progress: 90%; }
+#css-range { --range-progress: 90%; }
+#python-range { --range-progress: 50%; }
+#c-range { --range-progress: 70%; }
+#c\\+\\+-range { --range-progress: 20%; }
+
+
+  .normal-p {
+    @apply text-[14px] text-[#353434cb];
   }
   
-  /* The track - the background */
-  input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8px;
-    background: #e5e7eb;
-    border-radius: 5px;
+  .header-content-bg {
+    @apply bg-[url('../src/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20;
   }
   
-  input[type="range"]::-moz-range-track {
-    width: 100%;
-    height: 8px;
-    background: #e5e7eb;
-    border-radius: 5px;
+  .name-h {
+    @apply text-[95px] text-white font-bold;
   }
   
-  /* The thumb - the draggable button */
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 5px;
-    height: 15px;
-    background: #f97316; /* Orange to match your theme */
-    cursor: pointer;
-    margin-top: -4px; /* Centers the thumb on the track */
+  .name-p {
+    @apply font-mono text-[22px] text-white;
   }
   
-  input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #f97316;
-    border-radius: 50%;
-    cursor: pointer;
+  .name-btn {
+    @apply text-yellow-200 rounded-[25px] border-2 bg-orange-500 p-2 mt-4 outline-orange-500 px-4 hover:bg-orange-600 transition-all duration-500;
   }
   
-  /* Add colored fill to show skill level */
-  input[type="range"] {
-    background: linear-gradient(to right, #f97316 0%, #f97316 var(--range-progress), #e5e7eb var(--range-progress), #e5e7eb 100%);
+  .list-styles {
+    @apply text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer;
   }
   
-  /* Set different values for each skill */
-  #html-range {
-    --range-progress: 90%;
+  .ul-styles {
+    @apply flex justify-around w-[30%] text-lg font-bold text-[20px];
   }
   
-  #css-range {
-    --range-progress: 90%;
+  .profile-styles {
+    @apply border-[10px] border-[#f5f5f5] shadow-image-shadow rounded-full w-[14%] h-[28vh] flex justify-center relative;
   }
   
-  #python-range {
-    --range-progress: 50%;
+  .p-image {
+    @apply h-full rounded-full w-full relative z-10;
   }
   
-  #c-range {
-    --range-progress: 70%;
+  .about-containers {
+    @apply w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2;
   }
   
-  #c\\+\\+-range {
-    --range-progress: 20%;
+  .about-h {
+    @apply w-6 border-orange-500 mt-1;
   }
+  
+  .cv-btn {
+    @apply text-[16px] text-orange-500 border-[1px] border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6;
+  }
+  
+  .social-icons {
+    @apply text-gray-700 hover:text-orange-500 transition-colors;
+  }
+  
+  .hr {
+    @apply w-6 border-orange-500 mt-1;
+  }
+  
+  .hr-contact {
+    @apply w-6 border-orange-500 mt-1 pb-4;
+  }
+  
+  /* resume styles */
+  .resume-divs {
+    @apply w-[30%] border-2 p-4 text-[25px];
+  }
+  
+  .details-div {
+    @apply border-b-2 h-[28vh];
+  }
+  
+  .resume-h2 {
+    @apply text-[25px] text-orange-500 mt-6;
+  }
+  
+  .r-pb {
+    @apply pb-4;
+  }
+  
+  .label {
+    @apply text-[22px] text-[#353434cb];
+  }
+  
+  /* summary bar styles */
+  .summary-bar-styles {
+    @apply h-[40vh] w-full bg-gray-800 my-16 flex gap-4 p-4;
+  }
+  
+  .act-sub-cont {
+    @apply w-[30%] p-10 flex;
+  }
+  
+  .activity-divs-icon {
+    @apply w-[45%] h-full border-r-2 justify-center;
+  }
+  
+  .act-icon-styles {
+    @apply text-gray-300 text-[70px] pt-6;
+  }
+  
+  .act-h1 {
+    @apply text-orange-500 pl-2 pt-4 font-bold text-[40px];
+  }
+  
+  .act-p {
+    @apply text-gray-300 text-[15px] pl-2;
+  }
+  
+  /* contact section styles */
+  .contact-h2 {
+    @apply text-[25px];
+  }
+  
+  .send-btn {
+    @apply text-white bg-orange-500 w-[90%] py-2 rounded-md hover:bg-orange-600 transition-all duration-[0.5s];
+  }
+  
+  .g-form-styles {
+    @apply w-[90%] rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5];
+  }
+  
