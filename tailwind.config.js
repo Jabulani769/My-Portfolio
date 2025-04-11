@@ -11,6 +11,9 @@ module.exports = {
         'bottom-shadow': '0 4px 10px #c7c1c1',
         'image-shadow': '0 15px 20px -5px #c7c1c1',
       },
+      screens: {
+        sm: '640px',
+      },
       colors: {  
         orange: {
           500: '#f97316',
