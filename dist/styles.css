@@ -1147,6 +1147,14 @@ input[type="range"] {
     margin-left: 40%;
   }
 
+  .max-sm\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .max-sm\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .max-sm\:block {
     display: block;
   }
@@ -1171,8 +1179,28 @@ input[type="range"] {
     height: 40%;
   }
 
+  .max-sm\:h-\[50vh\] {
+    height: 50vh;
+  }
+
   .max-sm\:h-auto {
     height: auto;
+  }
+
+  .max-sm\:h-\[45vh\] {
+    height: 45vh;
+  }
+
+  .max-sm\:h-\[40vh\] {
+    height: 40vh;
+  }
+
+  .max-sm\:h-\[44vh\] {
+    height: 44vh;
+  }
+
+  .max-sm\:h-\[20vh\] {
+    height: 20vh;
   }
 
   .max-sm\:w-\[40\%\] {
@@ -1189,6 +1217,10 @@ input[type="range"] {
 
   .max-sm\:w-full {
     width: 100%;
+  }
+
+  .max-sm\:justify-center {
+    justify-content: center;
   }
 
   .max-sm\:rounded-\[6px\] {
@@ -1263,6 +1295,22 @@ input[type="range"] {
 
   .max-sm\:text-\[60px\] {
     font-size: 60px;
+  }
+
+  .max-sm\:text-\[50px\] {
+    font-size: 50px;
+  }
+
+  .max-sm\:text-\[51px\] {
+    font-size: 51px;
+  }
+
+  .max-sm\:text-\[55px\] {
+    font-size: 55px;
+  }
+
+  .max-sm\:text-\[52px\] {
+    font-size: 52px;
   }
 
   .max-sm\:text-white {
