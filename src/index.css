@@ -42,128 +42,206 @@ input[type="range"] {
 #cpp-range { --range-progress: 20%; }
 
 
-  .normal-p {
-    @apply text-[14px] text-[#353434cb];
+.normal-p {
+  @apply text-[14px] text-[#353434cb];
+}
+
+.header-content-bg {
+  @apply bg-[url('../src/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20;
+}
+
+.name-h {
+  @apply text-[95px] text-white font-bold;
+}
+
+.name-p {
+  @apply font-mono text-[22px] text-white;
+}
+
+.name-btn {
+  @apply text-yellow-200 rounded-[25px] border-2 bg-orange-500 p-2 mt-4 outline-orange-500 px-4 hover:bg-orange-600 transition-all duration-500;
+}
+
+.list-styles {
+  @apply text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer;
+}
+
+.ul-styles {
+  @apply flex justify-around w-[30%] text-lg font-bold text-[20px];
+}
+
+.profile-styles {
+  @apply border-[10px] border-[#f5f5f5] shadow-image-shadow rounded-full w-[14%] h-[28vh] flex justify-center relative;
+}
+
+.p-image {
+  @apply h-full rounded-full w-full relative z-10;
+}
+
+.about-containers {
+  @apply w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2;
+}
+
+.about-h {
+  @apply w-6 border-orange-500 mt-1;
+}
+
+.cv-btn {
+  @apply text-[16px] text-orange-500 border-[1px] border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6;
+}
+
+.social-icons {
+  @apply text-gray-700 hover:text-orange-500 transition-colors;
+}
+
+.hr {
+  @apply w-6 border-orange-500 mt-1;
+}
+
+.hr-contact {
+  @apply w-6 border-orange-500 mt-1 pb-4;
+}
+
+/* resume styles */
+.resume-divs {
+  @apply w-[30%] border-2 p-4 text-[25px];
+}
+
+.details-div {
+  @apply border-b-2 h-[28vh];
+}
+
+.resume-h2 {
+  @apply text-[25px] text-orange-500 mt-6;
+}
+
+.r-pb {
+  @apply pb-4;
+}
+
+.label {
+  @apply text-[22px] text-[#353434cb];
+}
+
+/* summary bar styles */
+.summary-bar-styles {
+  @apply my-[15vh] h-[40vh] w-full bg-gray-800;
+}
+
+.act-sub-cont {
+  @apply w-[45%] p-10 flex;
+}
+
+.activity-divs-icon {
+  @apply w-[45%] h-full border-r-2 justify-center;
+}
+
+.act-icon-styles {
+  @apply text-gray-300 text-[70px] pt-6;
+}
+
+.act-h1 {
+  @apply text-orange-500 pl-2 pt-4 font-bold text-[40px];
+}
+
+.act-p {
+  @apply text-gray-300 text-[15px] pl-2;
+}
+
+/* contact section styles */
+.contact-h2 {
+  @apply text-[25px];
+}
+
+.send-btn {
+  @apply text-white bg-orange-500 w-[90%] py-2 rounded-md hover:bg-orange-600 transition-all duration-[0.5s];
+}
+
+.g-form-styles {
+  @apply w-[90%] rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5];
+}
+
+/* addition query */
+@media (max-width: 441px){
+  #line-height h1{
+    @apply text-[45px];
   }
-  
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1023px) {
   .header-content-bg {
-    @apply bg-[url('../src/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20;
+    @apply h-[70vh] pl-8 pt-[8%];
   }
   
   .name-h {
-    @apply text-[95px] text-white font-bold;
-  }
-  
-  .name-p {
-    @apply font-mono text-[22px] text-white;
-  }
-  
-  .name-btn {
-    @apply text-yellow-200 rounded-[25px] border-2 bg-orange-500 p-2 mt-4 outline-orange-500 px-4 hover:bg-orange-600 transition-all duration-500;
-  }
-  
-  .list-styles {
-    @apply text-gray-700 hover:text-gray-600 active:text-orange-500 cursor-pointer;
+    @apply text-[75px];
   }
   
   .ul-styles {
-    @apply flex justify-around w-[30%] text-lg font-bold text-[20px];
+    @apply w-[35%] text-[18px];
   }
   
   .profile-styles {
-    @apply border-[10px] border-[#f5f5f5] shadow-image-shadow rounded-full w-[14%] h-[28vh] flex justify-center relative;
-  }
-  
-  .p-image {
-    @apply h-full rounded-full w-full relative z-10;
+    @apply w-[18%] h-[22vh];
   }
   
   .about-containers {
-    @apply w-[33.33%] py-16 p-10 text-[1.8rem] border-b-2;
+    @apply py-8 px-6 text-[1.5rem];
   }
   
-  .about-h {
-    @apply w-6 border-orange-500 mt-1;
-  }
-  
-  .cv-btn {
-    @apply text-[16px] text-orange-500 border-[1px] border-orange-500 p-2 rounded-md hover:bg-orange-500 hover:text-white transition-colors duration-500 mt-6;
-  }
-  
-  .social-icons {
-    @apply text-gray-700 hover:text-orange-500 transition-colors;
-  }
-  
-  .hr {
-    @apply w-6 border-orange-500 mt-1;
-  }
-  
-  .hr-contact {
-    @apply w-6 border-orange-500 mt-1 pb-4;
-  }
-  
-  /* resume styles */
   .resume-divs {
-    @apply w-[30%] border-2 p-4 text-[25px];
-  }
-  
-  .details-div {
-    @apply border-b-2 h-[28vh];
-  }
-  
-  .resume-h2 {
-    @apply text-[25px] text-orange-500 mt-6;
-  }
-  
-  .r-pb {
-    @apply pb-4;
-  }
-  
-  .label {
-    @apply text-[22px] text-[#353434cb];
-  }
-  
-  /* summary bar styles */
-  .summary-bar-styles {
-    @apply h-[40vh] w-full bg-gray-800;
+    @apply w-[32%] text-[22px];
   }
   
   .act-sub-cont {
-    @apply w-[45%] p-10 flex;
-  }
-  
-  .activity-divs-icon {
-    @apply w-[45%] h-full border-r-2 justify-center;
+    @apply p-6;
   }
   
   .act-icon-styles {
-    @apply text-gray-300 text-[70px] pt-6;
+    @apply text-[60px] pt-4;
   }
   
   .act-h1 {
-    @apply text-orange-500 pl-2 pt-4 font-bold text-[40px];
+    @apply text-[35px] pt-2;
   }
-  
-  .act-p {
-    @apply text-gray-300 text-[15px] pl-2;
+}
+
+/* Phablet-specific styles (min-width: 768px and max-width: 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-content-bg {
+    @apply h-[70vh] pl-8 pt-[8%]; /* Adjust header for smaller phablet screens */
   }
-  
-  /* contact section styles */
-  .contact-h2 {
-    @apply text-[25px];
+
+  .name-h {
+    @apply text-[75px]; /* Reduce name size slightly */
   }
-  
-  .send-btn {
-    @apply text-white bg-orange-500 w-[90%] py-2 rounded-md hover:bg-orange-600 transition-all duration-[0.5s];
+
+  .ul-styles {
+    @apply w-[35%] text-[18px]; /* Adjust navigation links */
   }
-  
-  .g-form-styles {
-    @apply w-[90%] rounded-md border-2 pl-3 pr-3 outline-orange-500 bg-[#f5f5f5];
+
+  .profile-styles {
+    @apply w-[18%] h-[22vh]; /* Smaller profile picture */
   }
-  
-  /* addition query */
-  @media (max-width: 441px){
-  #line-height h1{
-      @apply max-sm:text-[45px];
-    }
+
+  .about-containers {
+    @apply py-8 px-6 text-[1.5rem]; /* About section smaller padding and font size */
   }
+
+  .resume-divs {
+    @apply w-[32%] text-[22px]; /* Resume sections adjusted width and text size */
+  }
+
+  .act-sub-cont {
+    @apply p-6; /* More compact padding for activity section */
+  }
+
+  .act-icon-styles {
+    @apply text-[60px] pt-4; /* Adjust activity icon size */
+  }
+
+  .act-h1 {
+    @apply text-[35px] pt-2; /* Adjust heading size */
+  }
+}
