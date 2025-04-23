@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/index.css -o ./public/styles.css --minify",
-    "watch": "npx tailwindcss -i ./src/index.css -o ./public/styles.css --watch",
+    "build": "npx tailwindcss -i ./src/index.css -o ./dist/styles.css --minify",
+    "watch": "npx tailwindcss -i ./src/index.css -o ./dist/styles.css --watch",
     "dev": "vite",
     "start": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
