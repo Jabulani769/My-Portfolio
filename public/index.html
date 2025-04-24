@@ -39,7 +39,7 @@
             
                     <!-- Nav 2 (Right) -->
                     <ul class="text-right ul-styles mobile:hidden tablet:w-[35%] tablet:text-[18px]">
-                        <li class="list-styles" onclick="alert('Portfolio not yet implemented!')"><a href="#">Portfolio</a></li>
+                        <li class="list-styles"><a href="#portfolio">Portfolio</a></li>
                         <li class="list-styles"><a href="https://jkblog.vercel.app">Blog</a></li>
                         <li class="list-styles"><a href="#contact-me">Contact</a></li>
                     </ul>
@@ -113,7 +113,7 @@
                     <!-- main container for my-resume sub container -->
                     <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around mobile:block mobile:w-full mobile:ml-0 mobile:h-auto tablet:w-[95%] tablet:ml-4 tablet:h-auto">
                         <!-- my resume sub cotainers -->
-                        <div class="resume-divs h-full mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
+                        <div class="resume-divs h-full mobile:h-auto mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
                             <h2 class="tablet:text-[22px]">Expertise</h2><hr class="hr"> <!--title of the container-->
                             <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
                                 <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - 2024</h2>
@@ -128,7 +128,7 @@
                                 </div>
                             </div>
 
-                    <div class="resume-divs mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
+                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
                         <h2 class="tablet:text-[22px]">Education</h2><hr class="hr"> <!--title of the container-->
                         <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
                             <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - Present</h2>
@@ -143,7 +143,7 @@
                         </div>
                     </div>
 
-                    <div class="resume-divs mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto">
+                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] tablet:w-[32%] tablet:h-auto">
                         <h2 class="tablet:text-[22px]">Skills</h2><hr class="hr"> <!--title of the container-->
                         <div id="details" class="mt-6 tablet:mt-4">
                             <label for="html-range" class="label mobile:text-[20px] tablet:text-[18px]">HTML</label>
@@ -151,6 +151,10 @@
 
                             <label for="css-range" class="label mobile:text-[20px] tablet:text-[18px]">CSS</label>
                             <input type="range" name="css-range" id="css-range" value="90" disabled>
+
+                            <label for="sql-range" class="label mobile:text-[20px] tablet:text-[18px]">SQL</label>
+                            <input type="range" name="sql-range" id="sql-range" value="60" disabled>
+
 
                             <label for="python-range" class="label mobile:text-[20px] tablet:text-[18px]">Python</label>
                             <input type="range" name="python-range" id="python-range" value="50" disabled>
@@ -166,7 +170,7 @@
         </section>
         
         <!-- summary bar of the activities and projects -->
-        <section id="summary-bar" class="summary-bar-styles flex mobile:block mobile:h-auto tablet:h-auto tablet:py-8">
+        <section id="summary-bar" class="summary-bar-styles flex mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8">
             <!-- the sub container of the summary bar that holds the icons and the text (4 divs) -->
             <!-- div1 -->
             <div id="mobile4" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> 
@@ -215,8 +219,70 @@
              </div>
         </section>
 
+        <section id="portfolio">
+            <h1 class="text-[35px] pt-10 pl-10 pb-6 mobile:text-center mobile:pl-0 tablet:text-[30px] tablet:pl-4 tablet:pt-8 tablet:pb-4"><span class="text-orange-500">My </span>Portfolio</h1>
+            <!-- main container for -->
+            <div class="px-4 w-[90%] m-auto h-[80vh] mobile:w-full mobile:h-auto tablet:w-[90%] tablet:ml-4 tablet:h-auto">
+                <!-- Menu switch Buttons -->
+                <div class="flex bg-[#f5f5f5] border-b-2 mobile:w-[258px] w-[21.5%] m-auto mb-4">
+                  <button onclick="showCategory('new')" class="tab-btn bg-orange-500 text-white px-4 py-1 mb-2  ">New</button>
+                  <button onclick="showCategory('web')" class="tab-btn bg-[#f5f5f5] text-black px-4 py-1 mb-2">Web</button>
+                  <button onclick="showCategory('programming')" class="tab-btn bg-[#f5f5f5] text-black px-4 py-1 mb-2">Programming</button>
+                </div>
+              
+                <!-- Content Box -->
+                <div id="content-box" class="p-4 bg-[#f5f5f5] mobile:p-2">
+                    <!-- the project div -->
+                    <div class="content-box new portfolio flex space-x-2 bg-[#f5f5f5]">
+                        <!-- box 1 -->
+                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('../src/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                            <a href="https://jkblog.vercel.app">
+                                <div class="m-auto mt-24">
+                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+              
+                     <!-- Web Section -->
+                     <div class="tab-content web flex portfolio space-x-2">
+                     <!-- box 1 -->
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('../src/imgs/portfolio.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                            <a href="https://github.com/Jabulani769/My-Portfolio">
+                                <div class="m-auto mt-24">
+                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Portfolio Webiste</h1>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- box 2 -->
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('../src/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                            <a href="https://jkblog.vercel.app">
+                                <div class="m-auto mt-24">
+                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+              
+                    <!-- Programming Section -->
+                   <div class="tab-content programming portfolio">
+                        <!-- box 1 -->
+                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('../src/imgs/vote.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                            <a href="https://github.com/Jabulani769/voting_system">
+                                <div class="m-auto mt-24">
+                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Terminal-Based Voting Systems</h1>
+                                    <p class="text-[20px] text-center text-white font-mono">C project</p>    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </section>
+
         <!-- contact me section  -->
-         <section id="contact-me" class="h-[90vh] flex justify-center mobile:block tablet:w-[90%] tablet:m-auto  tablet:h-auto tablet:py-8">
+         <section id="contact-me" class="h-[90vh] flex justify-center mobile:block mobile:mt-[8vh] tablet:w-[90%] tablet:m-auto  tablet:h-auto tablet:py-8">
             <div class="w-[50%] p-4 mobile:w-[95%] mobile:m-auto tablet:w-[90%]">
                 <h2 class="contact-h2">Send a message</h2> <hr class="hr-contact">
                 <!-- active form -->
@@ -244,7 +310,46 @@
     </main>
 
     <footer class="h-16vh flex items-center justify-center bg-black text-white">
-        <p class="text-center">@2025 Jabulani Kapherachoka. All rights reserved.</p>
+        <p class="text-center">&copy; 2025 Jabulani Kapherachoka. All rights reserved.</p>
     </footer>
+
+    <script>
+    function togglePortfolio() {
+        const header = document.getElementById('portfolio');
+        header.classList.toggle('hidden');
+    }
+
+    // my portfolio manu script
+    function showCategory(category) {
+    // Hide all sections
+    document.querySelectorAll('.tab-content').forEach(div => {
+      div.classList.add('hidden');
+    });
+
+    // Reset all buttons to default
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('bg-orange-500', 'text-white');
+      btn.classList.add('bg-[#f5f5f5]', 'text-black');
+    });
+
+    // Show selected section
+    document.querySelectorAll(`.${category}`).forEach(div => {
+      div.classList.remove('hidden');
+    });
+
+    // Highlight active button
+    const activeBtn = Array.from(document.querySelectorAll('.tab-btn'))
+      .find(btn => btn.textContent.toLowerCase() === category);
+    if (activeBtn) {
+      activeBtn.classList.add('bg-orange-500', 'text-white');
+      activeBtn.classList.remove('bg-[#f5f5f5]', 'text-black');
+    }
+  }
+
+  // Show 'new' by default on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    showCategory('new');
+  });
+    </script>
 </body>
 </html>
