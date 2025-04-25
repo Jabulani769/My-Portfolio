@@ -55,7 +55,7 @@ input[type="range"] {
 }
 
 .header-content-bg {
-  @apply bg-[url('../public/assets/imgs/samplebg.png')] bg-cover h-[88vh] w-full pt-[10%] pl-20;
+  @apply h-[88vh] w-full pt-[10%] pl-20;
 }
 
 .name-h {
