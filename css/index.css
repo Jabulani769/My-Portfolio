@@ -1,7 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  .dark body {
+    @apply text-white;
+  }
 
+    .dark label {
+    @apply text-gray-300;
+  }
+  .dark p {
+    @apply text-[#CFCFCF];
+  }
+
+  .dark a {
+    @apply text-white hover:text-blue-300;
+  }
+
+  .dark input{
+    @apply bg-gray-800;
+  }
+
+  .dark textarea{
+    @apply bg-gray-800;
+  }
+}
 /* Custom styling for range inputs */
 input[type="range"] {
   -webkit-appearance: none;
@@ -50,6 +73,9 @@ input[type="range"] {
   opacity: 0.4;
 }
 
+dark p {
+  color: white;
+}
 .normal-p {
   @apply text-[14px] text-[#353434cb];
 }
@@ -67,7 +93,7 @@ input[type="range"] {
 }
 
 .name-btn {
-  @apply text-yellow-200 rounded-[25px] border-2 bg-orange-500 p-2 mt-4 outline-orange-500 px-4 hover:bg-orange-600 transition-all duration-500;
+  @apply text-yellow-200 rounded-md border-2 bg-orange-500 p-2 mt-4 outline-orange-500 px-4 hover:bg-orange-600 transition-all duration-500;
 }
 
 .list-styles {

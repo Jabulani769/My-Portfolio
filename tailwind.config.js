@@ -13,14 +13,20 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
-      animation: {
-        marquee: 'marquee 15s linear infinite',
-      },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+        typing: {
+          'from': { width: '0' },
+          'to': { width: '450px' },
         },
+        blink: {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'white' },
+        },
+      },
+      animation: {
+        typing: 'typing 3s steps(30, end) forwards',
+        blink: 'blink 0.75s step-end infinite',
+        'typing-blink': 'typing 3s steps(30, end) forwards, blink 0.75s step-end infinite',
       },
       boxShadow: {
         'bottom-shadow': '0 4px 10px #c7c1c1',

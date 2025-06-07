@@ -7,19 +7,48 @@
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#f5f5f5]">
+<body class="bg-[#f5f5f5] dark:bg-[#0C0C0C] dark:text-white transition-colors duration-300">
     <header id="header1">
         <section id="header-text-box">
             <!-- the header name and profession + resume button -->
-            <div id="header-content" class="header-content-bg bg-[url('assets/imgs/samplebg.png')] bg-cover mobile:px-1 mobile:h-[40vh] tablet:px-8 tablet:pt-[8%] tablet:h-[85vh]">
-                <div id="line-height" class="line-height">
-                    <h1 class="name-h leading-[35px] mobile:text-center mobile:text-[60px] tablet:text-[75px]">Jabulani</h1>
-                    <h1 class="name-h mobile:text-center mobile:text-[60px] tablet:text-[75px]">Kapherachoka</h1>
+            <div id="header-content" class="header-content-bg bg-[url('assets/imgs/samplebg.webp')] dark:bg-[url('assets/imgs/dark-bg.webp')] bg-cover mobile:px-1 mobile:h-[40vh] tablet:px-8 tablet:pt-[8%] tablet:h-[85vh]">
+                <div class="fixed top-0 bg-orange-500 text-black w-[100%] left-[50%] transform translate-x-[-50%] mt-1 rounded-xl mobile:block hidden dark:bg-gray-900">
+                    <div class="flex justify-between">
+                        <a href="javascript:void(0);" class="hidden mobile:block px-4 py-2" onclick="myFunction()">
+                            <i id="menu-icon" class="fa fa-bars text-[30px] p-1 rounded"></i>
+                        </a>
+
+                        <button id="toggleDark" class="text-yellow-500 dark:text-white text-3xl transition-colors duration-500 px-4" aria-label="Toggle Dark Mode">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile nav-->
+                    <div id="myLinks" class="hidden text-black transition-all duration-300 mt-6 dark:bg-gray-900 rounded-lg">
+                        <ul class="text-center px-6 py-0 space-y-4">
+                            <li class="block w-full"><a href="#about">About Me</a></li>
+                            <li class="block w-full"><a href="#my-resume">My Resume</a></li>
+                            <li class="block w-full"><a href="#portfolio">My Projects</a></li>
+                            <li class="block w-full pb-2"><a href="https://jkblog.vercel.app">My Blog</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="name-p mobile:text-center mobile:text-[20px] mobile:pt-8 tablet:text-[20px]">Front-end Developer | Programmer</p>
+
+                <!-- the name -->
+                <div id="line-height" class="line-height mt-6 mobile:pl-1">
+                    <h1 class="name-h leading-[35px] mobile:text-left mobile:text-[60px] pt-3 tablet:text-[75px]">Jabulani</h1>
+                    <h1 class="name-h mobile:text-left mobile:text-[60px] tablet:text-[75px]">Kapherachoka</h1>
+                </div>
+                <p class="name-p mobile:text-left mobile:text-[20px] mobile:pt-1 mobile:pl-1 tablet:text-[20px]">
+                    <span id="typewriter" class="inline-block border-r-4 border-white pr-1"></span>
+                </p>
+                <!-- <p class="name-p mobile:text-center mobile:text-[20px] mobile:pt-8 tablet:text-[20px] overflow-hidden whitespace-nowrap border-r-4 animate-typing-blink">Front-end Developer | Programmer</p> -->
                 <!-- print resume bttn -->
-                 <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing"><button class="name-btn mobile:flex mobile:m-auto mobile:mt-3 tablet:mt-6">View Resume</button>
-                 </a>
+                 <section class="flex gap-4 my-2 mobile:w-[60%] p-1">
+                    <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing"><button class="name-btn self-center tablet:mt-6 dark:bg-gray-800 dark:border-orange-600 dark:hover:bg-blue-700">View Resume</button></a>
+                    <button class="name-btn self-center dark:bg-gray-800 dark:border-orange-600 dark:hover:bg-blue-700">Hire Me</button>
+                 </section>
+
             </div>
 
             <!-- the portfolio navigation section -->
@@ -34,7 +63,7 @@
             
                     <!-- Image (Center) -->
                     <div id="profile-img" class="profile-styles mobile:hidden mobile:m-auto mobile:w-[160px] mobile:h-[160px] mobile:shadow-none tablet:w-[160px] tablet:h-[160px]">
-                        <img src="assets/imgs/my-pic.JPG" alt="my-picture" class="p-image">
+                        <img src="assets/imgs/my-pic.webp" alt="my-picture" class="p-image">
                     </div>
             
                     <!-- Nav 2 (Right) -->
@@ -50,39 +79,22 @@
 
     <!-- the main content of the portfolio -->
     <main id="main-content">
-        <div class="sticky top-0 bg-orange-500 text-black w-full mobile:block hidden">
-            <!-- Hamburger Icon for Mobile -->
-            <a href="javascript:void(0);" class="hidden mobile:block px-4 py-2" onclick="myFunction()">
-                <i id="menu-icon" class="fa fa-bars text-[30px] p-1 rounded"></i>
-            </a>
-
-            <!-- Mobile Menu BELOW fixed header -->
-            <div id="myLinks" class="hidden text-black w-full transition-all duration-300 mt-6">
-                <ul class="text-center px-6 py-0 space-y-4">
-                    <li class="block w-full"><a href="#about">About Me</a></li>
-                    <li class="block w-full"><a href="#my-resume">My Resume</a></li>
-                    <li class="block w-full"><a href="#portfolio">My Projects</a></li>
-                    <li class="block w-full pb-2"><a href="https://jkblog.vercel.app">My Blog</a></li>
-                </ul>
-            </div>
-        </div>
-
         <section id="about" class="h-[68vh] mobile:h-auto flex mobile:block tablet:h-auto tablet:flex">
             <!-- div 1-->
-            <div id="cont-1" class="about-containers mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6">
-                <h2 class="mobile:text-center mobile:pt-28 tablet:pt-16 tablet:text-[1.5rem]">Who am I ?</h2><hr class="about-h mobile:m-auto mobile:mb-2 tablet:mb-4"> <!--title of the container-->
+            <div id="cont-1" class="about-containers border-l-2 border-r-2 mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6 tablet:border-l-2 tablet:border-r-2">
+                <div id="mobile2" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2 dark:border-[#2A2A2A]">
+                <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">Who am I ?</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
                     <!-- container details -->
-                    <div id="mobile1" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
-                        <h3 class="text-[22px] pt-10 leading-[28px] mobile:pt-0 tablet:pt-4 tablet:text-[20px] tablet:leading-[24px]">A Front-end Developer / Programmer Located in Malawi, Blantyre.</h3>
-                        <p class="normal-p pt-4 tablet:pt-2">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Bachelor's Degree in Business Management Information Systems.</p>
-                    
-                        <button class="cv-btn tablet:mt-4" onclick="alert('Not yet attached')">Download My CV</button>
-                    </div>
+                    <h3 class="text-[22px] pt-10 leading-[28px] mobile:pt-0 tablet:pt-4 tablet:text-[20px] tablet:leading-[24px]">A Front-end Developer / Programmer Located in Malawi, Blantyre.</h3>
+                    <p class="normal-p pt-4 tablet:pt-2">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Bachelor's Degree in Business Management Information Systems.</p>
+                
+                    <button class="cv-btn tablet:mt-4" onclick="alert('Not yet attached')">Download My CV</button>
+                </div>
             </div>
 
             <!--div 2 -->
-            <div id="cont-2" class="about-containers border-l-2 border-r-2 mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6 tablet:border-l-2 tablet:border-r-2">
-                <div id="mobile2" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
+            <div id="cont-2" class="about-containers border-r-2 mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6 tablet:border-l-2 tablet:border-r-2">
+                <div id="mobile2" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2 dark:border-[#2A2A2A]">
                     <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">Personal Info</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
                         <!-- container details -->
                                 <p class="normal-p pt-10 mobile:pt-4 tablet:pt-4"><b>Birthdate :</b>16/05/2006</p>
@@ -110,7 +122,7 @@
 
                 <!-- div 3-->
                 <div id="cont-3" class="about-containers mobile:w-full mobile:p-4 mobile:border-b-0 tablet:w-[33.33%] tablet:py-8 tablet:px-6">
-                    <div id="mobile3" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
+                    <div id="mobile3" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2 dark:border-[#2A2A2A]">
                         <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">My Expertise</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
                             <!-- container details -->
                             <h3 class="text-[20px] pt-10 mobile:pt-4 tablet:pt-4">Web Developer</h3>
@@ -128,26 +140,26 @@
             <section id="my-resume" class="h-full w-full p-3">
                 <h1 class="text-[35px] pt-10 pl-10 pb-6 mobile:text-center mobile:pl-0 tablet:text-[30px] tablet:pl-4 tablet:pt-8 tablet:pb-4"><span class="text-orange-500">My </span>Resume</h1>
                     <!-- main container for my-resume sub container -->
-                    <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around mobile:block mobile:w-full mobile:ml-0 mobile:h-auto tablet:w-[95%] tablet:ml-4 tablet:h-auto">
+                    <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around mobile:block mobile:w-full mobile:ml-0 mobile:h-auto tablet:w-[95%] tablet:ml-4 tablet:h-auto ">
                         <!-- my resume sub cotainers -->
-                        <div class="resume-divs h-full mobile:h-auto mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
+                        <div class="resume-divs h-full mobile:h-auto mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4 dark:border-[#2A2A2A]">
                             <h2 class="tablet:text-[22px]">Expertise</h2><hr class="hr"> <!--title of the container-->
-                            <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
+                            <div id="details" class="details-div dark:border-[#2A2A2A] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
                                 <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - 2024</h2>
                                 <p class="normal-p r-pb">Front-end Developer</p>
                                 <p class="normal-p">At Malawi College of Accountancy after a year I became a Front-end developer. I had mastered HTML and CSS at that moment.</p>
                             </div>
 
-                                <div id="details" class="h-[28vh] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
-                                    <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023</h2>
-                                    <p class="normal-p r-pb">ICT Basics</p>
-                                    <p class="normal-p">Went to Sanwecka where I acquired a certificate in Information Communication Technology (ICT) basics. Additionally, gained experience on how to use Microsoft Office Package.</p>
-                                </div>
+                            <div id="details" class="h-[28vh] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
+                                <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023</h2>
+                                <p class="normal-p r-pb">ICT Basics</p>
+                                <p class="normal-p">Went to Sanwecka where I acquired a certificate in Information Communication Technology (ICT) basics. Additionally, gained experience on how to use Microsoft Office Package.</p>
                             </div>
+                        </div>
 
-                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
+                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4 dark:border-[#2A2A2A]">
                         <h2 class="tablet:text-[22px]">Education</h2><hr class="hr"> <!--title of the container-->
-                        <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
+                        <div id="details" class="details-div dark:border-[#2A2A2A] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
                             <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - Present</h2>
                             <p class="normal-p r-pb">Bachelors Degree in Management Information Systems</p>
                             <p class="normal-p">At Malawi College of Accountancy (MCA), did a Degree in Business Management Information Systems.</p>
@@ -160,7 +172,7 @@
                         </div>
                     </div>
 
-                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] tablet:w-[32%] tablet:h-auto">
+                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] tablet:w-[32%] tablet:h-auto dark:border-[#2A2A2A]">
                         <h2 class="tablet:text-[22px]">Skills</h2><hr class="hr"> <!--title of the container-->
                         <div id="details" class="mt-6 tablet:mt-4">
                             <label for="html-range" class="label mobile:text-[20px] tablet:text-[18px]">HTML</label>
@@ -187,7 +199,7 @@
         </section>
         
         <!-- summary bar of the activities and projects -->
-        <section id="summary-bar" class="summary-bar-styles flex mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8">
+        <section id="stats" class="summary-bar-styles stats-section flex mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8 dark:bg-[#1A1A1A]">
             <!-- the sub container of the summary bar that holds the icons and the text (4 divs) -->
             <!-- div1 -->
             <div id="mobile4" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> 
@@ -196,7 +208,7 @@
                         <i class="fa-solid fa-stopwatch act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">200</h1>
+                        <h1 class="counter act-h1 tablet:text-[35px] tablet:pt-2" data-target="200">100</h1>
                         <p class="act-p">Hours Worked</p>
                     </div>
                 </div>
@@ -206,7 +218,7 @@
                         <i class="fa-solid fa-list-check act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">2</h1>
+                        <h1 class="counter act-h1 tablet:text-[35px] tablet:pt-2" data-target="2">0</h1>
                         <p class="act-p">Projects Finished</p> 
                     </div>
                 </div>
@@ -219,8 +231,8 @@
                         <i class="fa-solid fa-face-smile-beam act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">0</h1>
-                        <p class="act-p">Happy Clients</p>
+                        <h1 class="counter act-h1 tablet:text-[35px] tablet:pt-2" data-target="1">0</h1>
+                        <p class="act-p">Happy Clients</p> 
                     </div>
                 </div>
                 <!-- div4 -->
@@ -229,7 +241,7 @@
                         <i class="fa-solid fa-mug-hot act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">10</h1>
+                        <h1 class="counter act-h1 tablet:text-[35px] tablet:pt-2" data-target="10">0</h1>
                         <p class="act-p">Coffee Drunk</p>
                     </div>
                 </div>
@@ -239,20 +251,20 @@
         <section id="portfolio">
             <h1 class="text-[35px] pt-10 pl-10 pb-6 mobile:text-center mobile:pl-0 tablet:text-[30px] tablet:pl-4 tablet:pt-8 tablet:pb-4"><span class="text-orange-500">My </span>Portfolio</h1>
             <!-- main container for -->
-            <div class="px-4 w-[90%] m-auto h-[80vh] mobile:w-full mobile:h-auto tablet:w-[90%] tablet:ml-4 tablet:h-auto">
+            <div class="px-4 w-[90%] m-auto h-[80vh] mobile:w-full mobile:h-auto tablet:w-[90%] tablet:ml-4 tablet:h-auto dark:bg-[#0C0C0C]">
                 <!-- Menu switch Buttons -->
-                <div class="flex bg-[#f5f5f5] border-b-2 m-auto mb-4 mobile:w-[232px] w-[21.5%] tablet:w-[31%]">
+                <div class="flex bg-[#f5f5f5] border-b-2 mobile:dark:border-b-0 m-auto mb-4 mobile:w-[232px] w-[21.5%] tablet:w-[31%] dark:bg-[#0C0C0C]">
                   <button onclick="showCategory('new')" class="tab-btn bg-orange-500 text-white px-4 py-1 mb-2">New</button>
                   <button onclick="showCategory('web')" class="tab-btn bg-[#f5f5f5] text-black px-4 py-1 mb-2">Web</button>
                   <button onclick="showCategory('programming')" class="tab-btn bg-[#f5f5f5] text-black px-2 py-1 mb-2">Programming</button>
                 </div>
               
                 <!-- Content Box -->
-                <div id="content-box" class="p-4 bg-[#f5f5f5] mobile:p-2">
+                <div id="content-box" class="p-4 bg-[#f5f5f5] mobile:p-2 dark:bg-[#0C0C0C]">
                     <!-- the project div -->
-                    <div class="content-box new portfolio flex space-x-2 bg-[#f5f5f5]">
+                    <div class="content-box new portfolio flex space-x-2 bg-[#f5f5f5] dark:bg-[#0C0C0C]">
                         <!-- box 1 -->
-                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://jkblog.vercel.app">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
@@ -264,7 +276,7 @@
                      <!-- Web Section -->
                      <div class="tab-content web flex portfolio space-x-2">
                      <!-- box 1 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/portfolio.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/portfolio.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://github.com/Jabulani769/My-Portfolio">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Portfolio Webiste</h1>
@@ -273,7 +285,7 @@
                         </div>
 
                         <!-- box 2 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://jkblog.vercel.app">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
@@ -285,7 +297,7 @@
                     <!-- Programming Section -->
                    <div class="tab-content programming portfolio">
                         <!-- box 1 -->
-                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/vote.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/vote.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://github.com/Jabulani769/voting_system">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Terminal-Based Voting Systems</h1>
@@ -311,7 +323,7 @@
                     <button class="send-btn mobile:w-full">Send Message</button>
                 </form>
             </div>
-            <div class="p-4 mobile:bg-gray-800 tablet:w-[50%]">
+            <div class="p-4 mobile:bg-gray-800 tablet:w-[50%] mobile:dark:bg-[#1A1A1A]">
                 <h2 class="contact-h2 mobile:text-white">Get in touch</h2> <hr class="hr-contact">
 
                 <h3 class="mt-4 mobile:text-white tablet:mt-8 tablet:text-[22px]">Phone:</h3>
@@ -331,5 +343,99 @@
     </footer>
 
     <script src="index.js"></script>
+    <script>
+ const toggleBtn = document.getElementById('toggleDark');
+    const root = document.documentElement;
+
+    // Load theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const theme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (theme === 'dark' || (!theme && prefersDark)) {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+    });
+
+    // Toggle dark mode on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = root.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+const phrases = ["Welcome to my site", "I'm a Web Developer | Programmer", "Let's build Something together!"];
+  const el = document.getElementById("typewriter");
+
+  let currentPhrase = 0;
+  let currentChar = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const fullText = phrases[currentPhrase];
+    
+    if (isDeleting) {
+      currentChar--;
+    } else {
+      currentChar++;
+    }
+
+    el.textContent = fullText.substring(0, currentChar);
+
+    let delay = isDeleting ? 50 : 100;
+
+    if (!isDeleting && currentChar === fullText.length) {
+      delay = 2000; // pause at end
+      isDeleting = true;
+    } else if (isDeleting && currentChar === 0) {
+      isDeleting = false;
+      currentPhrase = (currentPhrase + 1) % phrases.length;
+      delay = 500;
+    }
+
+    setTimeout(typeLoop, delay);
+  }
+
+  // Start the animation
+  typeLoop();
+
+  // Function to animate the count
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    const speed = 800; // smaller is faster
+
+    const updateCount = () => {
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / speed);
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  // Use IntersectionObserver to detect when section is in view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+          animateCounter(counter);
+        });
+        observer.disconnect(); // stop observing after triggering once
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe the section
+  observer.observe(document.querySelector('#stats'));
+</script>
+
 </body>
 </html>
