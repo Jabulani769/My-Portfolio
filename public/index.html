@@ -7,19 +7,41 @@
     <link href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-[#f5f5f5]">
+<body class="bg-[#f5f5f5] transition-colors duration-300">
     <header id="header1">
         <section id="header-text-box">
             <!-- the header name and profession + resume button -->
-            <div id="header-content" class="header-content-bg bg-[url('assets/imgs/samplebg.png')] bg-cover mobile:px-1 mobile:h-[40vh] tablet:px-8 tablet:pt-[8%] tablet:h-[85vh]">
-                <div id="line-height" class="line-height">
-                    <h1 class="name-h leading-[35px] mobile:text-center mobile:text-[60px] tablet:text-[75px]">Jabulani</h1>
-                    <h1 class="name-h mobile:text-center mobile:text-[60px] tablet:text-[75px]">Kapherachoka</h1>
+            <div id="header-content" class="header-content-bg bg-[url('assets/imgs/samplebg.webp')] dark:bg-[url('assets/imgs/dark-bg.webp')] bg-cover mobile:px-1 mobile:h-[40vh] tablet:px-8 tablet:pt-[8%] tablet:h-[85vh]">
+                <div class="fixed top-0 flex justify-end w-full pr-4 bg-white text-black mobile:flex hidden">
+                    <a href="javascript:void(0);" class="ml-auto px-4 py-2 flex items-center justify-center w-12" onclick="myFunction()">
+                        <i id="menu-icon" class="fa fa-bars text-orange-500 text-[30px]"></i>
+                    </a>
+
+                    <!-- Mobile nav-->
+                    <div id="myLinks" class="hidden absolute right-0 top-full text-black transition-all duration-300 mt-2 mx-2 rounded-lg bg-orange-500">
+                        <ul class="text-center px-6 py-0 space-y-4">
+                            <li class="block w-full"><a href="#about">About Me</a></li>
+                            <li class="block w-full"><a href="#my-resume">My Resume</a></li>
+                            <li class="block w-full"><a href="#portfolio">My Projects</a></li>
+                            <li class="block w-full pb-2"><a href="https://jkblog.vercel.app">My Blog</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="name-p mobile:text-center mobile:text-[20px] mobile:pt-8 tablet:text-[20px]">Front-end Developer | Programmer</p>
+
+                <!-- the name -->
+                <div id="line-height" class="line-height mt-6 mobile:pl-1">
+                    <h1 class="name-h leading-[35px] mobile:text-left mobile:text-[60px] pt-3 tablet:text-[75px]">Jabulani</h1>
+                    <h1 class="name-h mobile:text-left mobile:text-[60px] tablet:text-[75px]">Kapherachoka</h1>
+                </div>
+                <p class="name-p mobile:text-left mobile:text-[20px] mobile:pt-1 mobile:pl-1 tablet:text-[20px]">
+                    <span id="typewriter" class="inline-block border-r-4 border-white pr-1"></span>
+                </p>
+                <!-- <p class="name-p mobile:text-center mobile:text-[20px] mobile:pt-8 tablet:text-[20px] overflow-hidden whitespace-nowrap border-r-4 animate-typing-blink">Front-end Developer | Programmer</p> -->
                 <!-- print resume bttn -->
-                 <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing"><button class="name-btn mobile:flex mobile:m-auto mobile:mt-3 tablet:mt-6">View Resume</button>
-                 </a>
+                 <section class="flex gap-4 my-2 mobile:w-[60%] p-1">
+                    <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing"><button class="name-btn self-center tablet:mt-6 dark:bg-gray-800 dark:border-orange-600 dark:hover:bg-blue-700">View Resume</button></a>
+                 </section>
+
             </div>
 
             <!-- the portfolio navigation section -->
@@ -34,7 +56,7 @@
             
                     <!-- Image (Center) -->
                     <div id="profile-img" class="profile-styles mobile:hidden mobile:m-auto mobile:w-[160px] mobile:h-[160px] mobile:shadow-none tablet:w-[160px] tablet:h-[160px]">
-                        <img src="assets/imgs/my-pic.JPG" alt="my-picture" class="p-image">
+                        <img src="assets/imgs/my-pic.webp" alt="my-picture" class="p-image">
                     </div>
             
                     <!-- Nav 2 (Right) -->
@@ -48,25 +70,7 @@
         </section>
     </header>
 
-    <!-- the main content of the portfolio -->
     <main id="main-content">
-        <div class="sticky top-0 bg-orange-500 text-black w-full mobile:block hidden">
-            <!-- Hamburger Icon for Mobile -->
-            <a href="javascript:void(0);" class="hidden mobile:block px-4 py-2" onclick="myFunction()">
-                <i id="menu-icon" class="fa fa-bars text-[30px] p-1 rounded"></i>
-            </a>
-
-            <!-- Mobile Menu BELOW fixed header -->
-            <div id="myLinks" class="hidden text-black w-full transition-all duration-300 mt-6">
-                <ul class="text-center px-6 py-0 space-y-4">
-                    <li class="block w-full"><a href="#about">About Me</a></li>
-                    <li class="block w-full"><a href="#my-resume">My Resume</a></li>
-                    <li class="block w-full"><a href="#portfolio">My Projects</a></li>
-                    <li class="block w-full pb-2"><a href="https://jkblog.vercel.app">My Blog</a></li>
-                </ul>
-            </div>
-        </div>
-
         <section id="about" class="h-[68vh] mobile:h-auto flex mobile:block tablet:h-auto tablet:flex">
             <!-- div 1-->
             <div id="cont-1" class="about-containers mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6">
@@ -86,8 +90,8 @@
                     <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">Personal Info</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
                         <!-- container details -->
                                 <p class="normal-p pt-10 mobile:pt-4 tablet:pt-4"><b>Birthdate :</b>16/05/2006</p>
-                                <p class="normal-p pt-3 tablet:pt-2"><b>Email :</b>jabulanikbanda769@gmail.com</p>
-                                <p class="normal-p pt-3 tablet:pt-2"><b>Phone :</b>+ (265) 889 430 469</p>
+                                <p class="normal-p pt-3 tablet:pt-2"><b>Email :</b>jabulanikapherachoka@gmail.com</p>
+                                <p class="normal-p pt-3 tablet:pt-2"><b>Phone :</b>+(265) 896 362 899</p>
                                 <p class="normal-p pt-3 tablet:pt-2"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
                         
                                 <!-- social media icons in the personal info div -->
@@ -113,14 +117,14 @@
                     <div id="mobile3" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
                         <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">My Expertise</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
                             <!-- container details -->
-                            <h3 class="text-[20px] pt-10 mobile:pt-4 tablet:pt-4">Web Developer</h3>
-                            <p class="normal-p">Front-end only HTML and CSS</p><hr class="mt-4 border-orange-500 tablet:mt-2">
+                            <h3 class="text-[20px] pt-10 mobile:pt-4 tablet:pt-4">Frontend</h3>
+                            <p class="normal-p">HTML, CSS, Js and TailwindCSS</p><hr class="mt-4 border-orange-500 tablet:mt-2">
 
-                            <h3 class="text-[20px] pt-4 tablet:pt-2">Programmer</h3>
-                            <p class="normal-p">Python and C</p><hr class="mt-4 border-orange-500 tablet:mt-2">
+                            <h3 class="text-[20px] pt-4 tablet:pt-2">Backend</h3>
+                            <p class="normal-p">PHP, MySQL</p><hr class="mt-4 border-orange-500 tablet:mt-2">
 
                             <h3 class="text-[20px] pt-4 tablet:pt-2">Designer</h3>
-                            <p class="normal-p">Learning to use Figma</p><hr class="mt-4 border-orange-500 tablet:mt-2">
+                            <p class="normal-p">Figma</p><hr class="mt-4 border-orange-500 tablet:mt-2">
                     </div>
                 </div>
             </section>
@@ -162,7 +166,7 @@
 
                     <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] tablet:w-[32%] tablet:h-auto">
                         <h2 class="tablet:text-[22px]">Skills</h2><hr class="hr"> <!--title of the container-->
-                        <div id="details" class="mt-6 tablet:mt-4">
+                        <div id="details" class="mt-6 tablet:mt-4 h-auto">
                             <label for="html-range" class="label mobile:text-[20px] tablet:text-[18px]">HTML</label>
                             <input type="range" name="html-range" id="html-range" value="90" disabled> <br>
 
@@ -177,17 +181,14 @@
                             <input type="range" name="python-range" id="python-range" value="50" disabled>
 
                             <label for="c-range" class="label mobile:text-[20px] tablet:text-[18px]">C</label>
-                            <input type="range" name="c-range" id="c-range" value="70" disabled>
-
-                            <label for="cpp-range" class="label mobile:text-[20px] tablet:text-[18px]">C++</label>
-                            <input type="range" name="cpp-range" id="cpp-range" value="20" disabled>
+                            <input type="range" name="c-range" id="c-range" value="20" disabled>
                         </div>
                     </div>
                 </div>
         </section>
         
         <!-- summary bar of the activities and projects -->
-        <section id="summary-bar" class="summary-bar-styles flex mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8">
+        <section id="summary-bar" class="summary-bar-styles flex justify-between mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8">
             <!-- the sub container of the summary bar that holds the icons and the text (4 divs) -->
             <!-- div1 -->
             <div id="mobile4" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> 
@@ -196,7 +197,7 @@
                         <i class="fa-solid fa-stopwatch act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">200</h1>
+                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">200+</h1>
                         <p class="act-p">Hours Worked</p>
                     </div>
                 </div>
@@ -206,25 +207,25 @@
                         <i class="fa-solid fa-list-check act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">2</h1>
+                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">4+</h1>
                         <p class="act-p">Projects Finished</p> 
                     </div>
                 </div>
             </div>
 
             <!-- div3 -->
-             <div id="mobile5" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full">
+             <!-- <div id="mobile5" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> -->
                 <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
                     <div class="activity-divs-icon">
                         <i class="fa-solid fa-face-smile-beam act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
                     <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">0</h1>
+                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">10+</h1>
                         <p class="act-p">Happy Clients</p>
                     </div>
                 </div>
                 <!-- div4 -->
-                <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
+                <!-- <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
                     <div class="activity-divs-icon">
                         <i class="fa-solid fa-mug-hot act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
                     </div>
@@ -232,7 +233,7 @@
                         <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">10</h1>
                         <p class="act-p">Coffee Drunk</p>
                     </div>
-                </div>
+                </div> -->
              </div>
         </section>
 
@@ -252,7 +253,7 @@
                     <!-- the project div -->
                     <div class="content-box new portfolio flex space-x-2 bg-[#f5f5f5]">
                         <!-- box 1 -->
-                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://jkblog.vercel.app">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
@@ -264,7 +265,7 @@
                      <!-- Web Section -->
                      <div class="tab-content web flex portfolio space-x-2">
                      <!-- box 1 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/portfolio.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/portfolio.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://github.com/Jabulani769/My-Portfolio">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Portfolio Webiste</h1>
@@ -273,7 +274,7 @@
                         </div>
 
                         <!-- box 2 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.png')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://jkblog.vercel.app">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
@@ -285,7 +286,7 @@
                     <!-- Programming Section -->
                    <div class="tab-content programming portfolio">
                         <!-- box 1 -->
-                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/vote.jpg')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
+                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/vote.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
                             <a href="https://github.com/Jabulani769/voting_system">
                                 <div class="m-auto mt-24">
                                     <h1 class="text-[30px] text-center font-sans font-bold text-white">Terminal-Based Voting Systems</h1>
@@ -315,13 +316,13 @@
                 <h2 class="contact-h2 mobile:text-white">Get in touch</h2> <hr class="hr-contact">
 
                 <h3 class="mt-4 mobile:text-white tablet:mt-8 tablet:text-[22px]">Phone:</h3>
-                <p class="normal-p mobile:text-white">+(265) 889 430 469</p>
+                <p class="normal-p mobile:text-white">+(265) 896 362 899</p>
 
                 <h3 class="pt-4 mobile:text-white tablet:pt-6 tablet:text-[22px]">Address:</h3>
                 <p class="normal-p mobile:text-white">Naperi, Blantyre, Malawi</p>
 
                 <h3 class="pt-4 mobile:text-white tablet:pt-6 tablet:text-[22px]">Email:</h3>
-                <p class="normal-p mobile:text-white">jabulanikbanda769@gmail.com</p>
+                <p class="normal-p mobile:text-white">jabulanikapherachoka@gmail.com</p>
              </div>
          </section>
     </main>

@@ -39,8 +39,7 @@ input[type="range"] {
 #css-range { --range-progress: 90%; }
 #sql-range { --range-progress: 60%; }
 #python-range { --range-progress: 50%; }
-#c-range { --range-progress: 70%; }
-#cpp-range { --range-progress: 20%; }
+#c-range { --range-progress: 20%; }
 
 .portfolio > * {
   transition: opacity 0.5s ease-in-out;
