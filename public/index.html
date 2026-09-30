@@ -1,336 +1,617 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jabulani's Portfolio</title>
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer, Malawi</title>
+  <meta name="description" content="Jabulani Kapherachoka is a front-end and full-stack developer based in Blantyre, Malawi. I build fast, practical web applications and digital products." />
+  <meta name="author" content="Jabulani Kapherachoka" />
+  <link rel="canonical" href="https://jabulani769.github.io/My-Portfolio/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jabulani769.github.io/My-Portfolio/" />
+  <meta property="og:title" content="Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer" />
+  <meta property="og:description" content="I build fast, practical web applications and digital products from Malawi." />
+  <meta property="og:image" content="https://jabulani769.github.io/My-Portfolio/assets/imgs/my-pic.webp" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer" />
+  <meta name="twitter:description" content="I build fast, practical web applications and digital products from Malawi." />
+  <meta name="twitter:image" content="https://jabulani769.github.io/My-Portfolio/assets/imgs/my-pic.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧑‍💻</text></svg>" />
+
+  <!-- Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Performance: preload critical resources -->
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="preload" href="assets/imgs/samplebg.webp" as="image" fetchpriority="high" />
+
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jabulani Kapherachoka",
+    "jobTitle": "Front-End & Full-Stack Developer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Blantyre", "addressCountry": "MW" },
+    "url": "https://jabulani769.github.io/My-Portfolio/",
+    "sameAs": [
+      "https://github.com/Jabulani769",
+      "https://www.linkedin.com/in/jabulani-kapherachoka-845636333",
+      "https://jkblog.vercel.app"
+    ]
+  }
+  </script>
 </head>
-<body class="bg-[#f5f5f5] transition-colors duration-300">
-    <header id="header1">
-        <section id="header-text-box">
-            <!-- the header name and profession + resume button -->
-            <div id="header-content" class="header-content-bg bg-[url('assets/imgs/samplebg.webp')] dark:bg-[url('assets/imgs/dark-bg.webp')] bg-cover mobile:px-1 mobile:h-[40vh] tablet:px-8 tablet:pt-[8%] tablet:h-[85vh]">
-                <div class="fixed top-0 flex justify-end w-full pr-4 bg-white text-black mobile:flex hidden">
-                    <a href="javascript:void(0);" class="ml-auto px-4 py-2 flex items-center justify-center w-12" onclick="myFunction()">
-                        <i id="menu-icon" class="fa fa-bars text-orange-500 text-[30px]"></i>
-                    </a>
 
-                    <!-- Mobile nav-->
-                    <div id="myLinks" class="hidden absolute right-0 top-full text-black transition-all duration-300 mt-2 mx-2 rounded-lg bg-orange-500">
-                        <ul class="text-center px-6 py-0 space-y-4">
-                            <li class="block w-full"><a href="#about">About Me</a></li>
-                            <li class="block w-full"><a href="#my-resume">My Resume</a></li>
-                            <li class="block w-full"><a href="#portfolio">My Projects</a></li>
-                            <li class="block w-full pb-2"><a href="https://jkblog.vercel.app">My Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
+<body class="bg-[#fafafa] dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-                <!-- the name -->
-                <div id="line-height" class="line-height mt-6 mobile:pl-1">
-                    <h1 class="name-h leading-[35px] mobile:text-left mobile:text-[60px] pt-3 tablet:text-[75px]">Jabulani</h1>
-                    <h1 class="name-h mobile:text-left mobile:text-[60px] tablet:text-[75px]">Kapherachoka</h1>
-                </div>
-                <p class="name-p mobile:text-left mobile:text-[20px] mobile:pt-1 mobile:pl-1 tablet:text-[20px]">
-                    <span id="typewriter" class="inline-block border-r-4 border-white pr-1"></span>
-                </p>
-                <!-- <p class="name-p mobile:text-center mobile:text-[20px] mobile:pt-8 tablet:text-[20px] overflow-hidden whitespace-nowrap border-r-4 animate-typing-blink">Front-end Developer | Programmer</p> -->
-                <!-- print resume bttn -->
-                 <section class="flex gap-4 my-2 mobile:w-[60%] p-1">
-                    <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing"><button class="name-btn self-center tablet:mt-6 dark:bg-gray-800 dark:border-orange-600 dark:hover:bg-blue-700">View Resume</button></a>
-                 </section>
+  <!-- Skip link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-orange-500 focus:text-white focus:rounded-md focus:outline-none">
+    Skip to main content
+  </a>
 
+  <!-- Header / Hero — single unified unit -->
+  <header id="header1" class="relative">
+
+    <!-- Desktop nav: transparent over hero, glass on scroll -->
+    <div id="site-nav" class="fixed top-0 inset-x-0 z-50 mobile:hidden">
+      <nav class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between" aria-label="Main navigation">
+        <a href="#header1" class="site-logo font-extrabold text-lg tracking-tight">JK<span class="text-orange-500">.</span></a>
+        <ul class="flex items-center gap-7 text-[15px] font-medium">
+          <li><a href="#about" data-navlink="about" class="nav-link nav-over">About</a></li>
+          <li><a href="#services" data-navlink="services" class="nav-link nav-over">Services</a></li>
+          <li><a href="#my-resume" data-navlink="my-resume" class="nav-link nav-over">Resume</a></li>
+          <li><a href="#portfolio" data-navlink="portfolio" class="nav-link nav-over">Work</a></li>
+          <li><a href="#blog" data-navlink="blog" class="nav-link nav-over">Blog</a></li>
+          <li><a href="#contact-me" data-navlink="contact-me" class="nav-link nav-over">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-2">
+          <button id="theme-toggle" aria-label="Toggle dark mode" class="nav-icon-btn focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <i class="fa-solid fa-moon" id="theme-icon" aria-hidden="true"></i>
+          </button>
+          <a href="#contact-me" class="hidden lg:inline-flex items-center gap-1.5 text-[14px] font-semibold text-white bg-orange-500 pl-4 pr-3 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 hover:-translate-y-px hover:shadow-[0_8px_20px_rgba(249,115,22,0.4)] focus:outline-none focus:ring-2 focus:ring-orange-500">Hire Me <span class="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center"><i class="fa-solid fa-arrow-right text-[10px]" aria-hidden="true"></i></span></a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile top bar: transparent over hero, glass on scroll -->
+    <div id="mobile-bar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 h-[52px] mobile:flex hidden">
+      <a href="#header1" class="site-logo font-extrabold tracking-tight">JK<span class="text-orange-500">.</span></a>
+      <div class="flex items-center gap-1">
+        <button id="theme-toggle-mobile" aria-label="Toggle dark mode" class="nav-icon-btn focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <i class="fa-solid fa-moon" id="theme-icon-mobile" aria-hidden="true"></i>
+        </button>
+        <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="nav-icon-btn focus:outline-none focus:ring-2 focus:ring-orange-500">
+          <i id="menu-icon" class="fa fa-bars text-orange-500 text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav menu (overlay panel) -->
+    <nav id="mobile-menu" class="hidden fixed top-[52px] inset-x-0 z-40 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 shadow-lift mobile:block" aria-label="Mobile navigation">
+      <ul class="py-2 max-w-6xl mx-auto">
+        <li><a href="#about" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">About</a></li>
+        <li><a href="#services" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">Services</a></li>
+        <li><a href="#my-resume" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">Resume</a></li>
+        <li><a href="#portfolio" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">Projects</a></li>
+        <li><a href="#blog" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">Blog</a></li>
+        <li><a href="#currently-building" class="block px-6 py-3 text-gray-800 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-900 hover:text-orange-500 focus:outline-none focus:bg-gray-50 transition-colors">Building</a></li>
+        <li><a href="#contact-me" class="block px-6 py-3 font-semibold text-orange-500 hover:bg-orange-50 dark:hover:bg-gray-900 focus:outline-none transition-colors">Contact →</a></li>
+      </ul>
+    </nav>
+
+    <section id="header-text-box" class="relative">
+      <!-- Hero -->
+      <div
+        class="hero-bg hero-unified bg-[url('assets/imgs/samplebg.webp')] dark:bg-[url('assets/imgs/dark-bg.webp')] bg-cover bg-center"
+        role="banner"
+      >
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-badge hero-anim" style="--d:.05s">
+            <span class="hero-label-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </p>
+
+          <h1 class="hero-name hero-anim" style="--d:.15s">
+            Jabulani<br />Kapherachoka
+          </h1>
+
+          <p class="hero-role hero-anim" style="--d:.28s" aria-label="Backend, Software and Full-Stack Developer">
+            <span id="typewriter" role="status" aria-live="polite">Backend Developer</span><span class="hero-cursor" aria-hidden="true">|</span>
+          </p>
+
+          <div class="hero-divider hero-anim" style="--d:.38s" aria-hidden="true"></div>
+
+          <p class="hero-tagline hero-anim" style="--d:.46s">
+            I help businesses turn ideas, processes,<br class="mobile:hidden" />
+            and problems into <span class="hero-tagline-accent">practical digital solutions</span><br class="mobile:hidden" />
+            that improve how they work and serve their customers.
+          </p>
+
+          <div class="hero-ctas hero-anim" style="--d:.62s">
+            <a href="#portfolio" class="hero-btn-primary focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent">
+              View My Work
+              <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+            </a>
+            <a
+              href="https://github.com/Jabulani769"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hero-btn-outline focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="GitHub profile (opens in new tab)"
+            >
+              <i class="fab fa-github" aria-hidden="true"></i>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-code hero-anim" style="--d:.72s" aria-label="Sample PHP code turning a business idea into a working product">
+          <div class="hero-code-inner">
+            <div class="hero-code-bar" aria-hidden="true">
+              <span class="hero-code-dot hero-code-dot--red"></span>
+              <span class="hero-code-dot hero-code-dot--yellow"></span>
+              <span class="hero-code-dot hero-code-dot--green"></span>
+              <span class="hero-code-file">solutions.php</span>
             </div>
-
-            <!-- the portfolio navigation section -->
-            <div id="nav" class="h-[12vh] flex items-center shadow-bottom-shadow mobile:h-0 tablet:h-[10vh]">
-                <nav class="w-full flex justify-between items-center">
-                    <!-- Nav 1 (Left) -->
-                    <ul class="ul-styles mobile:hidden tablet:w-[35%] tablet:text-[18px]">
-                        <li class="list-styles"><a href="#header1">Home</a></li>
-                        <li class="list-styles"><a href="#about">About</a></li>
-                        <li class="list-styles"><a href="#my-resume">Resume</a></li>
-                    </ul>
-            
-                    <!-- Image (Center) -->
-                    <div id="profile-img" class="profile-styles mobile:hidden mobile:m-auto mobile:w-[160px] mobile:h-[160px] mobile:shadow-none tablet:w-[160px] tablet:h-[160px]">
-                        <img src="assets/imgs/my-pic.webp" alt="my-picture" class="p-image">
-                    </div>
-            
-                    <!-- Nav 2 (Right) -->
-                    <ul class="text-right ul-styles mobile:hidden tablet:w-[35%] tablet:text-[18px]">
-                        <li class="list-styles"><a href="#portfolio">Portfolio</a></li>
-                        <li class="list-styles"><a href="https://jkblog.vercel.app">Blog</a></li>
-                        <li class="list-styles"><a href="#contact-me">Contact</a></li>
-                    </ul>
-                </nav>
+            <pre class="hero-code-body"><code><span class="tok-c">// Turning ideas into working software</span>
+<span class="tok-k">function</span> <span class="tok-f">buildSolution</span>(<span class="tok-v">Idea</span> <span class="tok-v">$idea</span>): <span class="tok-v">Product</span>
+{
+    <span class="tok-v">$scope</span> = <span class="tok-f">clarify</span>(<span class="tok-v">$idea</span>-><span class="tok-f">processes</span>());
+    <span class="tok-v">$app</span>   = <span class="tok-f">craft</span>(<span class="tok-v">$scope</span>, [<span class="tok-s">'php'</span>, <span class="tok-s">'mysql'</span>]);
+    <span class="tok-k">return</span> <span class="tok-v">$app</span>-><span class="tok-f">launch</span>(); <span class="tok-c">// live in weeks</span><span class="hero-code-caret">▍</span>
+}</code></pre>
+            <div class="hero-code-status" aria-hidden="true">
+              <span><span class="hero-code-live"></span>PHP · MySQL</span>
+              <span>✓ ships</span>
             </div>
-        </section>
-    </header>
+          </div>
+        </figure>
+        </div>
+      </div>
+    </section>
+  </header>
 
-    <main id="main-content">
-        <section id="about" class="h-[68vh] mobile:h-auto flex mobile:block tablet:h-auto tablet:flex">
-            <!-- div 1-->
-            <div id="cont-1" class="about-containers mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6">
-                <h2 class="mobile:text-center mobile:pt-28 tablet:pt-16 tablet:text-[1.5rem]">Who am I ?</h2><hr class="about-h mobile:m-auto mobile:mb-2 tablet:mb-4"> <!--title of the container-->
-                    <!-- container details -->
-                    <div id="mobile1" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
-                        <h3 class="text-[22px] pt-10 leading-[28px] mobile:pt-0 tablet:pt-4 tablet:text-[20px] tablet:leading-[24px]">A Front-end Developer / Programmer Located in Malawi, Blantyre.</h3>
-                        <p class="normal-p pt-4 tablet:pt-2">I am a student at Malawi Collage of Accountancy (MCA). Currently studying for a Bachelor's Degree in Business Management Information Systems.</p>
-                    
-                        <button class="cv-btn tablet:mt-4" onclick="alert('Not yet attached')">Download My CV</button>
-                    </div>
+  <!-- Main -->
+  <main id="main-content">
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading" class="scroll-mt-20 py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal">
+          <p class="section-eyebrow">About</p>
+          <h2 id="about-heading" class="section-title">Developer with a business mindset</h2>
+          <p class="section-sub">Front-end &amp; full-stack developer based in Blantyre, Malawi — studying Business Management Information Systems, so I ship software with both the technical and business picture in mind.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5 mt-8">
+          <div class="card-min reveal">
+            <div class="flex items-center gap-4 mb-4">
+              <div class="about-avatar" aria-hidden="true">
+                <img src="assets/imgs/my-pic.webp" alt="" width="56" height="56" loading="lazy" />
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 dark:text-white leading-tight">Who am I?</h3>
+                <p class="text-[13px] text-gray-500 dark:text-gray-400">Blantyre, Malawi</p>
+              </div>
             </div>
+            <p class="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">I build fast, practical web apps — clean interfaces, real-world systems, no bloat.</p>
+            <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cv-btn inline-block focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Download CV (opens in new tab)">Download My CV</a>
+          </div>
 
-            <!--div 2 -->
-            <div id="cont-2" class="about-containers border-l-2 border-r-2 mobile:w-full mobile:p-4 mobile:border-none tablet:w-[33.33%] tablet:py-8 tablet:px-6 tablet:border-l-2 tablet:border-r-2">
-                <div id="mobile2" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
-                    <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">Personal Info</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
-                        <!-- container details -->
-                                <p class="normal-p pt-10 mobile:pt-4 tablet:pt-4"><b>Birthdate :</b>16/05/2006</p>
-                                <p class="normal-p pt-3 tablet:pt-2"><b>Email :</b>jabulanikapherachoka@gmail.com</p>
-                                <p class="normal-p pt-3 tablet:pt-2"><b>Phone :</b>+(265) 896 362 899</p>
-                                <p class="normal-p pt-3 tablet:pt-2"><b>Address :</b>Naperi, Blantyre, Malawi.</p>
-                        
-                                <!-- social media icons in the personal info div -->
-                                <div id="social-icons" class="flex mt-6 gap-8 tablet:mt-4 tablet:gap-6">
-                                    <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icons mobile:text-[25px] tablet:text-[20px]">
-                                        <i class="fab fa-linkedin fa-2x"></i>
-                                    </a>
-                                    <a href="https://github.com/Jabulani769" class="social-icons mobile:text-[25px] tablet:text-[20px]">
-                                        <i class="fab fa-github fa-2x"></i>
-                                    </a>
-                                    <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="social-icons mobile:text-[25px] tablet:text-[20px]">
-                                        <i class="fab fa-whatsapp fa-2x"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/jabulanikapherachoka?igsh=MW9pdWIzZ3QzdDgyNw==" class="social-icons mobile:text-[25px] tablet:text-[20px]">
-                                        <i class="fab fa-instagram fa-2x"></i>
-                                    </a>
-                                </div>
-                    </div>
-                </div>
-
-                <!-- div 3-->
-                <div id="cont-3" class="about-containers mobile:w-full mobile:p-4 mobile:border-b-0 tablet:w-[33.33%] tablet:py-8 tablet:px-6">
-                    <div id="mobile3" class="mobile:border-2 mobile:p-3 mobile:rounded-[6px] tablet:p-2">
-                        <h2 class="mobile:pt-2 tablet:pt-16 tablet:text-[1.5rem]">My Expertise</h2><hr class="about-h mobile:mb-2 tablet:mb-4"> <!--title of the container-->
-                            <!-- container details -->
-                            <h3 class="text-[20px] pt-10 mobile:pt-4 tablet:pt-4">Frontend</h3>
-                            <p class="normal-p">HTML, CSS, Js and TailwindCSS</p><hr class="mt-4 border-orange-500 tablet:mt-2">
-
-                            <h3 class="text-[20px] pt-4 tablet:pt-2">Backend</h3>
-                            <p class="normal-p">PHP, MySQL</p><hr class="mt-4 border-orange-500 tablet:mt-2">
-
-                            <h3 class="text-[20px] pt-4 tablet:pt-2">Designer</h3>
-                            <p class="normal-p">Figma</p><hr class="mt-4 border-orange-500 tablet:mt-2">
-                    </div>
-                </div>
-            </section>
-
-            <section id="my-resume" class="h-full w-full p-3">
-                <h1 class="text-[35px] pt-10 pl-10 pb-6 mobile:text-center mobile:pl-0 tablet:text-[30px] tablet:pl-4 tablet:pt-8 tablet:pb-4"><span class="text-orange-500">My </span>Resume</h1>
-                    <!-- main container for my-resume sub container -->
-                    <div id="flex-container" class="flex w-[80%] h-[80vh] ml-32 justify-around mobile:block mobile:w-full mobile:ml-0 mobile:h-auto tablet:w-[95%] tablet:ml-4 tablet:h-auto">
-                        <!-- my resume sub cotainers -->
-                        <div class="resume-divs h-full mobile:h-auto mobile:w-full mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
-                            <h2 class="tablet:text-[22px]">Expertise</h2><hr class="hr"> <!--title of the container-->
-                            <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
-                                <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - 2024</h2>
-                                <p class="normal-p r-pb">Front-end Developer</p>
-                                <p class="normal-p">At Malawi College of Accountancy after a year I became a Front-end developer. I had mastered HTML and CSS at that moment.</p>
-                            </div>
-
-                                <div id="details" class="h-[28vh] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
-                                    <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023</h2>
-                                    <p class="normal-p r-pb">ICT Basics</p>
-                                    <p class="normal-p">Went to Sanwecka where I acquired a certificate in Information Communication Technology (ICT) basics. Additionally, gained experience on how to use Microsoft Office Package.</p>
-                                </div>
-                            </div>
-
-                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] mobile:mb-2 tablet:w-[32%] tablet:h-auto tablet:mb-4">
-                        <h2 class="tablet:text-[22px]">Education</h2><hr class="hr"> <!--title of the container-->
-                        <div id="details" class="details-div mobile:h-[20vh] tablet:h-auto tablet:pb-4">
-                            <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2023 - Present</h2>
-                            <p class="normal-p r-pb">Bachelors Degree in Management Information Systems</p>
-                            <p class="normal-p">At Malawi College of Accountancy (MCA), did a Degree in Business Management Information Systems.</p>
-                        </div>
- 
-                        <div id="details" class="h-[28vh] mobile:h-[20vh] tablet:h-auto tablet:pb-4">
-                            <h2 class="resume-h2 tablet:text-[22px] tablet:mt-4">2020 - 2023</h2>
-                            <p class="normal-p r-pb">Secondary School Certificate</p>
-                            <p class="normal-p">Started and finished my secondary school at FOMO Independent Secondary School. Located in Mulanje, Malawi.</p>
-                        </div>
-                    </div>
-
-                    <div class="resume-divs mobile:w-full mobile:h-auto mobile:rounded-[6px] tablet:w-[32%] tablet:h-auto">
-                        <h2 class="tablet:text-[22px]">Skills</h2><hr class="hr"> <!--title of the container-->
-                        <div id="details" class="mt-6 tablet:mt-4 h-auto">
-                            <label for="html-range" class="label mobile:text-[20px] tablet:text-[18px]">HTML</label>
-                            <input type="range" name="html-range" id="html-range" value="90" disabled> <br>
-
-                            <label for="css-range" class="label mobile:text-[20px] tablet:text-[18px]">CSS</label>
-                            <input type="range" name="css-range" id="css-range" value="90" disabled>
-
-                            <label for="sql-range" class="label mobile:text-[20px] tablet:text-[18px]">SQL</label>
-                            <input type="range" name="sql-range" id="sql-range" value="60" disabled>
-
-
-                            <label for="python-range" class="label mobile:text-[20px] tablet:text-[18px]">Python</label>
-                            <input type="range" name="python-range" id="python-range" value="50" disabled>
-
-                            <label for="c-range" class="label mobile:text-[20px] tablet:text-[18px]">C</label>
-                            <input type="range" name="c-range" id="c-range" value="20" disabled>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        
-        <!-- summary bar of the activities and projects -->
-        <section id="summary-bar" class="summary-bar-styles flex justify-between mobile:block mobile:h-auto mobile:my-12 tablet:h-auto tablet:py-8">
-            <!-- the sub container of the summary bar that holds the icons and the text (4 divs) -->
-            <!-- div1 -->
-            <div id="mobile4" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> 
-                <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
-                    <div class="activity-divs-icon">
-                        <i class="fa-solid fa-stopwatch act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
-                    </div>
-                    <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">200+</h1>
-                        <p class="act-p">Hours Worked</p>
-                    </div>
-                </div>
-                <!-- div2 -->
-                <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
-                    <div class="activity-divs-icon mobile:w-[50%]">
-                        <i class="fa-solid fa-list-check act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
-                    </div>
-                    <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">4+</h1>
-                        <p class="act-p">Projects Finished</p> 
-                    </div>
-                </div>
+          <div class="card-min reveal">
+            <div class="card-icon"><i class="fa-solid fa-address-card" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white mb-3">Personal Info</h3>
+            <dl class="space-y-2 text-[14px]">
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Email</dt>
+                <dd><a href="mailto:jabulanikapherachoka@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors break-all">jabulanikapherachoka@gmail.com</a></dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Phone</dt>
+                <dd><a href="tel:+265896362899" class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors">+(265) 896 362 899</a></dd>
+              </div>
+              <div class="flex gap-2">
+                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Based</dt>
+                <dd class="text-gray-600 dark:text-gray-400">Naperi, Blantyre</dd>
+              </div>
+            </dl>
+            <div class="flex mt-5 gap-5" aria-label="Social media links">
+              <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://github.com/Jabulani769" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/jabulanikapherachoka" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
             </div>
+          </div>
 
-            <!-- div3 -->
-             <!-- <div id="mobile5" class="flex w-full mobile:flex justify-around tablet:flex tablet:w-full"> -->
-                <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
-                    <div class="activity-divs-icon">
-                        <i class="fa-solid fa-face-smile-beam act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
-                    </div>
-                    <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">10+</h1>
-                        <p class="act-p">Happy Clients</p>
-                    </div>
-                </div>
-                <!-- div4 -->
-                <!-- <div class="act-sub-cont mobile:w-[50%] tablet:w-[50%] tablet:p-6">
-                    <div class="activity-divs-icon">
-                        <i class="fa-solid fa-mug-hot act-icon-styles mobile:text-[50px] mobile:pt-8 tablet:text-[60px] tablet:pt-4"></i>
-                    </div>
-                    <div class="w-[55%] h-full">
-                        <h1 class="act-h1 tablet:text-[35px] tablet:pt-2">10</h1>
-                        <p class="act-p">Coffee Drunk</p>
-                    </div>
-                </div> -->
-             </div>
-        </section>
+          <div class="card-min reveal">
+            <div class="card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white mb-3">My Expertise</h3>
+            <dl class="space-y-3 text-[14px]">
+              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Frontend</dt><dd class="text-gray-600 dark:text-gray-400">HTML · CSS · JavaScript · Tailwind</dd></div>
+              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Backend</dt><dd class="text-gray-600 dark:text-gray-400">PHP · MySQL</dd></div>
+              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Design</dt><dd class="text-gray-600 dark:text-gray-400">Figma → code</dd></div>
+              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Other</dt><dd class="text-gray-600 dark:text-gray-400">Git · Linux · C</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="portfolio">
-            <h1 class="text-[35px] pt-10 pl-10 pb-6 mobile:text-center mobile:pl-0 tablet:text-[30px] tablet:pl-4 tablet:pt-8 tablet:pb-4"><span class="text-orange-500">My </span>Portfolio</h1>
-            <!-- main container for -->
-            <div class="px-4 w-[90%] m-auto h-[80vh] mobile:w-full mobile:h-auto tablet:w-[90%] tablet:ml-4 tablet:h-auto">
-                <!-- Menu switch Buttons -->
-                <div class="flex bg-[#f5f5f5] border-b-2 m-auto mb-4 mobile:w-[232px] w-[21.5%] tablet:w-[31%]">
-                  <button onclick="showCategory('new')" class="tab-btn bg-orange-500 text-white px-4 py-1 mb-2">New</button>
-                  <button onclick="showCategory('web')" class="tab-btn bg-[#f5f5f5] text-black px-4 py-1 mb-2">Web</button>
-                  <button onclick="showCategory('programming')" class="tab-btn bg-[#f5f5f5] text-black px-2 py-1 mb-2">Programming</button>
-                </div>
-              
-                <!-- Content Box -->
-                <div id="content-box" class="p-4 bg-[#f5f5f5] mobile:p-2">
-                    <!-- the project div -->
-                    <div class="content-box new portfolio flex space-x-2 bg-[#f5f5f5]">
-                        <!-- box 1 -->
-                        <div class="tab-content new mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
-                            <a href="https://jkblog.vercel.app">
-                                <div class="m-auto mt-24">
-                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-              
-                     <!-- Web Section -->
-                     <div class="tab-content web flex portfolio space-x-2">
-                     <!-- box 1 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/portfolio.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
-                            <a href="https://github.com/Jabulani769/My-Portfolio">
-                                <div class="m-auto mt-24">
-                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Portfolio Webiste</h1>
-                                </div>
-                            </a>
-                        </div>
+    <!-- Services -->
+    <section id="services" aria-labelledby="services-heading" class="scroll-mt-20 py-14 bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal">
+          <p class="section-eyebrow">Services</p>
+          <h2 id="services-heading" class="section-title">What I can do for you</h2>
+          <p class="section-sub">Small, focused engagements — freelance and part-time. Clear scope, fast turnaround, clean handoff.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5 mt-8">
+          <div class="card-min reveal">
+            <div class="card-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Frontend Development</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Responsive landing pages, portfolios and blogs. Semantic HTML, Tailwind, vanilla JS, performance-first.</p>
+            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind</span><span class="tech-tag">JavaScript</span></div>
+          </div>
+          <div class="card-min reveal">
+            <div class="card-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Full-Stack PHP + MySQL</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Auth, CRUD, dashboards and small business systems with clean, maintainable backend code.</p>
+            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">CRUD</span></div>
+          </div>
+          <div class="card-min reveal">
+            <div class="card-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Figma to Code</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Pixel-faithful implementation of your designs — accessible, mobile-first, dark-mode ready.</p>
+            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">Figma</span><span class="tech-tag">Responsive</span><span class="tech-tag">A11y</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                        <!-- box 2 -->
-                        <div class="tab-content web mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/blog.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
-                            <a href="https://jkblog.vercel.app">
-                                <div class="m-auto mt-24">
-                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Fully Responsive Blog Webiste</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-              
-                    <!-- Programming Section -->
-                   <div class="tab-content programming portfolio">
-                        <!-- box 1 -->
-                        <div class="tab-content programming mt-2 w-[30%] h-[50vh] border border-orange-500 bg-[url('assets/imgs/vote.webp')] bg-cover bg-no-repeat mobile:w-[50%] mobile:h-[40vh] tablet:h-auto">
-                            <a href="https://github.com/Jabulani769/voting_system">
-                                <div class="m-auto mt-24">
-                                    <h1 class="text-[30px] text-center font-sans font-bold text-white">Terminal-Based Voting Systems</h1>
-                                    <p class="text-[20px] text-center text-white font-mono">C project</p>    
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-           </div>
-        </section>
+    <!-- Resume -->
+    <section id="my-resume" aria-labelledby="resume-heading" class="scroll-mt-20 py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal">
+          <p class="section-eyebrow">Resume</p>
+          <h2 id="resume-heading" class="section-title"><span class="text-orange-500">My </span>journey</h2>
+        </div>
 
-        <!-- contact me section  -->
-         <section id="contact-me" class="h-[90vh] flex justify-center mobile:block mobile:mt-[8vh] tablet:w-[90%] tablet:m-auto  tablet:h-auto tablet:py-8">
-            <div class="w-[50%] p-4 mobile:w-[95%] mobile:m-auto tablet:w-[90%]">
-                <h2 class="contact-h2">Send a message</h2> <hr class="hr-contact">
-                <!-- active form -->
-                <form action="https://formspree.io/f/xldjopqw" method="POST">
-                    <input type="text" name="Name" placeholder="Name" class="mt-4 h-10 g-form-styles mobile:w-full tablet:h-12"> <br><br>
-                    <input type="email" name="Email" placeholder="Email" class="h-10 g-form-styles mobile:w-full tablet:h-12"> <br><br>
-                    <textarea name="Message" id="textbox" class="pt-1 h-52 g-form-styles mobile:w-full"></textarea> <br><br>
-
-                    <button class="send-btn mobile:w-full">Send Message</button>
-                </form>
+        <div class="grid lg:grid-cols-2 gap-5 mt-8">
+          <div class="card-min reveal">
+            <h3 class="font-bold text-gray-900 dark:text-white mb-4">Expertise</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <p class="resume-h2">2023 – 2024</p>
+                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">Front-end Developer</p>
+                <p class="text-[14px] text-gray-600 dark:text-gray-400">Mastered HTML and CSS whilst studying at Malawi College of Accountancy.</p>
+              </div>
+              <div class="timeline-item">
+                <p class="resume-h2">2023</p>
+                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">ICT Basics — Sanwecka</p>
+                <p class="text-[14px] text-gray-600 dark:text-gray-400">Certificate in ICT and Microsoft Office Package.</p>
+              </div>
             </div>
-            <div class="p-4 mobile:bg-gray-800 tablet:w-[50%]">
-                <h2 class="contact-h2 mobile:text-white">Get in touch</h2> <hr class="hr-contact">
+          </div>
 
-                <h3 class="mt-4 mobile:text-white tablet:mt-8 tablet:text-[22px]">Phone:</h3>
-                <p class="normal-p mobile:text-white">+(265) 896 362 899</p>
+          <div class="card-min reveal">
+            <h3 class="font-bold text-gray-900 dark:text-white mb-4">Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <p class="resume-h2">2023 – Present</p>
+                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">BSc Business Management Information Systems</p>
+                <p class="text-[14px] text-gray-600 dark:text-gray-400">Malawi College of Accountancy (MCA).</p>
+              </div>
+              <div class="timeline-item">
+                <p class="resume-h2">2020 – 2023</p>
+                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">Secondary School Certificate</p>
+                <p class="text-[14px] text-gray-600 dark:text-gray-400">FOMO Independent Secondary School, Mulanje, Malawi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <h3 class="pt-4 mobile:text-white tablet:pt-6 tablet:text-[22px]">Address:</h3>
-                <p class="normal-p mobile:text-white">Naperi, Blantyre, Malawi</p>
+        <div class="card-min reveal mt-5">
+          <h3 class="font-bold text-gray-900 dark:text-white">Tech Stack</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-4">
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Frontend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Tailwind CSS</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Backend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Languages</p><div class="flex flex-wrap gap-2"><span class="skill-tag">C</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Tools</p><div class="flex flex-wrap gap-2"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Linux</span><span class="skill-tag">Figma</span><span class="skill-tag">Vite</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <h3 class="pt-4 mobile:text-white tablet:pt-6 tablet:text-[22px]">Email:</h3>
-                <p class="normal-p mobile:text-white">jabulanikapherachoka@gmail.com</p>
-             </div>
-         </section>
-    </main>
+    <!-- Stats -->
+    <section id="summary-bar" aria-label="Activity statistics" class="summary-bar-styles">
+      <div class="max-w-6xl mx-auto flex w-full justify-around flex-wrap gap-4 py-8 px-6 mobile:block mobile:h-auto">
+        <div class="act-sub-cont reveal">
+          <div class="activity-divs-icon" aria-hidden="true"><i class="fa-solid fa-stopwatch act-icon-styles"></i></div>
+          <div class="pl-4"><p class="act-h1"><span data-count="200">200</span>+</p><p class="act-p">Hours Worked</p></div>
+        </div>
+        <div class="act-sub-cont reveal">
+          <div class="activity-divs-icon" aria-hidden="true"><i class="fa-solid fa-list-check act-icon-styles"></i></div>
+          <div class="pl-4"><p class="act-h1"><span data-count="4">4</span>+</p><p class="act-p">Projects Finished</p></div>
+        </div>
+        <div class="act-sub-cont reveal">
+          <div class="activity-divs-icon" aria-hidden="true"><i class="fa-solid fa-face-smile-beam act-icon-styles"></i></div>
+          <div class="pl-4"><p class="act-h1"><span data-count="10">10</span>+</p><p class="act-p">Happy Clients</p></div>
+        </div>
+      </div>
+    </section>
 
-    <footer class="h-[8vh] flex items-center justify-center text-black">
-        <p class="text-center">&copy; 2025 Jabulani Kapherachoka. All rights reserved.</p>
-    </footer>
+    <!-- Portfolio -->
+    <section id="portfolio" aria-labelledby="portfolio-heading" class="scroll-mt-20 py-14 dark:bg-gray-950">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal">
+          <p class="section-eyebrow">Portfolio</p>
+          <h2 id="portfolio-heading" class="section-title"><span class="text-orange-500">Selected </span>Work</h2>
+          <p class="section-sub">Real projects, real code. Each one includes a short case study — problem, solution, what I built.</p>
+        </div>
 
-    <script src="index.js"></script>
+        <div class="mt-6" role="tablist" aria-label="Portfolio categories">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button onclick="showCategory('all')" class="tab-btn active-tab" role="tab" aria-selected="true" aria-controls="portfolio-list" id="tab-all">All</button>
+            <button onclick="showCategory('web')" class="tab-btn" role="tab" aria-selected="false" aria-controls="portfolio-list" id="tab-web">Web</button>
+            <button onclick="showCategory('programming')" class="tab-btn" role="tab" aria-selected="false" aria-controls="portfolio-list" id="tab-programming">Programming</button>
+          </div>
+
+          <div id="portfolio-list" class="grid grid-cols-3 gap-6 mobile:grid-cols-1 tablet:grid-cols-2 pb-4" role="tabpanel" aria-labelledby="tab-all">
+
+            <article class="project-card all web reveal" data-category="web" aria-label="Fully Responsive Blog Website project">
+              <div class="project-img-wrap">
+                <img src="assets/imgs/blog.webp" alt="Screenshot of the fully responsive blog website" class="project-img" width="800" height="500" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                  <h3 class="project-title">Fully Responsive Blog Website</h3>
+                  <span class="project-badge">Live</span>
+                </div>
+                <p class="project-desc">A personal blog built with responsive design principles — readable on any device, with clean typography and fast load times.</p>
+                <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                <details class="case-study-details">
+                  <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
+                  <div class="case-study-body">
+                    <p class="case-label">Problem</p>
+                    <p class="case-text">No accessible personal platform for sharing technical writing and project documentation.</p>
+                    <p class="case-label mt-2">Solution</p>
+                    <p class="case-text">Built a static blog with clean reading UX, fast performance and mobile-first layout.</p>
+                    <p class="case-label mt-2">What I built</p>
+                    <ul class="case-list"><li>Responsive layout across all screen sizes</li><li>Fast loading with minimal dependencies</li><li>Clean typography system for readable content</li></ul>
+                  </div>
+                </details>
+                <div class="project-links">
+                  <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-primary focus:outline-none focus:ring-2 focus:ring-orange-500">Live <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card all web reveal" data-category="web" aria-label="Fully Responsive Portfolio Website project">
+              <div class="project-img-wrap">
+                <img src="assets/imgs/portfolio.webp" alt="Screenshot of the portfolio website" class="project-img" width="800" height="500" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                  <h3 class="project-title">Portfolio Website</h3>
+                  <span class="project-badge">Live</span>
+                </div>
+                <p class="project-desc">This portfolio — built from scratch with Tailwind CSS, Vite and vanilla JS. No frameworks, no templates.</p>
+                <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Vite</span><span class="tech-tag">JavaScript</span></div>
+                <details class="case-study-details">
+                  <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
+                  <div class="case-study-body">
+                    <p class="case-label">Problem</p>
+                    <p class="case-text">Needed a professional identity site that could demonstrate real frontend ability — not just list skills.</p>
+                    <p class="case-label mt-2">Solution</p>
+                    <p class="case-text">Built a performance-focused, accessible portfolio with dark mode, semantic HTML, and optimised assets.</p>
+                    <p class="case-label mt-2">What I built</p>
+                    <ul class="case-list"><li>Custom Tailwind config with mobile/tablet breakpoints</li><li>Dark mode via class strategy</li><li>Compressed images (6MB → ~160KB total)</li><li>WCAG 2.2-aware accessibility</li><li>Full SEO metadata</li></ul>
+                  </div>
+                </details>
+                <div class="project-links">
+                  <a href="https://github.com/Jabulani769/My-Portfolio" target="_blank" rel="noopener noreferrer" class="project-link-primary focus:outline-none focus:ring-2 focus:ring-orange-500">GitHub <i class="fab fa-github text-xs" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card all programming reveal" data-category="programming" aria-label="Terminal-Based Voting System project">
+              <div class="project-img-wrap">
+                <img src="assets/imgs/vote.webp" alt="Screenshot of the terminal-based voting system" class="project-img" width="800" height="500" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                  <h3 class="project-title">Terminal-Based Voting System</h3>
+                  <span class="project-badge project-badge--lang">C</span>
+                </div>
+                <p class="project-desc">A command-line voting system built in C — handles voter registration, candidate management, vote tallying and result reporting.</p>
+                <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">C</span><span class="tech-tag">File I/O</span><span class="tech-tag">Structs</span><span class="tech-tag">CLI</span></div>
+                <details class="case-study-details">
+                  <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
+                  <div class="case-study-body">
+                    <p class="case-label">Problem</p>
+                    <p class="case-text">Needed a project to demonstrate low-level programming concepts: memory, structs, file handling and system design.</p>
+                    <p class="case-label mt-2">Solution</p>
+                    <p class="case-text">Built a complete voting system in C with persistent storage, input validation and a clean terminal interface.</p>
+                    <p class="case-label mt-2">What I built</p>
+                    <ul class="case-list"><li>Voter registration and duplicate detection</li><li>Candidate management and vote tallying</li><li>Persistent file-based storage</li><li>Input validation and error handling</li><li>Result reporting with percentages</li></ul>
+                    <p class="case-label mt-2">Challenge</p>
+                    <p class="case-text">Managing memory safely in C without garbage collection — learned proper struct allocation, pointer arithmetic and file stream handling.</p>
+                  </div>
+                </details>
+                <div class="project-links">
+                  <a href="https://github.com/Jabulani769/voting_system" target="_blank" rel="noopener noreferrer" class="project-link-primary focus:outline-none focus:ring-2 focus:ring-orange-500">GitHub <i class="fab fa-github text-xs" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog preview -->
+    <section id="blog" aria-labelledby="blog-heading" class="scroll-mt-20 py-14 bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between gap-4 flex-wrap reveal">
+          <div>
+            <p class="section-eyebrow">Writing</p>
+            <h2 id="blog-heading" class="section-title">From the blog</h2>
+            <p class="section-sub">Notes on frontend, C programming and building in Malawi.</p>
+          </div>
+          <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14px] font-semibold text-orange-500 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">View all posts <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i></a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5 mt-8">
+          <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="card-min reveal block focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Frontend</p>
+            <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">Why I build mobile-first, every time</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">Most of my users are on phones. Here’s the 5-step checklist I use before I touch desktop styles.</p>
+            <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+          </a>
+          <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="card-min reveal block focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Programming</p>
+            <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">What C taught me about JavaScript</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">Memory, structs and file I/O — low-level lessons from my voting system that made me a better web dev.</p>
+            <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+          </a>
+          <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="card-min reveal block focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Workflow</p>
+            <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">Tailwind tips for tiny teams</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">How I keep utility classes readable, themable and fast — without a component framework.</p>
+            <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currently Building -->
+    <section id="currently-building" aria-labelledby="building-heading" class="scroll-mt-20 px-6 py-14 bg-gray-800 dark:bg-gray-950">
+      <div class="max-w-6xl mx-auto">
+        <h2 id="building-heading" class="text-[24px] font-extrabold tracking-tight pb-6 text-white mobile:text-center reveal">
+          <span class="inline-flex items-center gap-2">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+            </span>
+            Currently Building
+          </span>
+        </h2>
+
+        <div class="grid grid-cols-2 gap-6 mobile:grid-cols-1 tablet:grid-cols-2">
+          <div class="building-card reveal">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-white font-bold text-[18px]">Personal Portfolio v2</h3>
+              <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-400 rounded-full font-mono">Active</span>
+            </div>
+            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">Upgrading this portfolio to 2026 standards — semantic HTML, accessibility, SEO, dark mode, compressed assets and case studies.</p>
+            <div class="flex flex-wrap gap-2"><span class="tech-tag-dark">HTML</span><span class="tech-tag-dark">Tailwind CSS</span><span class="tech-tag-dark">Vite</span><span class="tech-tag-dark">Accessibility</span></div>
+            <div class="progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Portfolio v2 progress"><div class="progress-fill" data-progress="75"></div></div>
+            <p class="mt-2 text-[12px] text-gray-500">75% — polish &amp; content pass</p>
+          </div>
+
+          <div class="building-card reveal">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="text-white font-bold text-[18px]">PHP + MySQL Web App</h3>
+              <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full font-mono">Planning</span>
+            </div>
+            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">A full-stack web application using PHP and MySQL — authentication, CRUD operations, and a clean Tailwind interface.</p>
+            <div class="flex flex-wrap gap-2"><span class="tech-tag-dark">PHP</span><span class="tech-tag-dark">MySQL</span><span class="tech-tag-dark">Tailwind CSS</span></div>
+            <div class="progress-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="PHP app progress"><div class="progress-fill" data-progress="20"></div></div>
+            <p class="mt-2 text-[12px] text-gray-500">20% — scope &amp; schema design</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact-me" aria-labelledby="contact-heading" class="scroll-mt-20 py-14 dark:bg-gray-950">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 id="contact-heading" class="section-title">Let’s work together</h2>
+          <p class="section-sub">Open to freelance and part-time opportunities. I reply within 1–2 days.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-5 mt-8">
+          <div class="card-min reveal">
+            <h3 class="contact-h2 dark:text-gray-100">Send a Message</h3>
+            <hr class="hr-contact" aria-hidden="true" />
+            <form id="contact-form" action="https://formspree.io/f/xldjopqw" method="POST" novalidate aria-label="Contact form">
+              <div class="mt-4">
+                <label for="contact-name" class="block text-[14px] font-semibold text-gray-700 dark:text-gray-300 mb-1">Name <span aria-hidden="true" class="text-red-500">*</span></label>
+                <input type="text" id="contact-name" name="Name" placeholder="Your name" required autocomplete="name" class="h-10 g-form-styles w-full" />
+                <p class="field-error" data-error-for="contact-name"></p>
+              </div>
+              <div class="mt-2">
+                <label for="contact-email" class="block text-[14px] font-semibold text-gray-700 dark:text-gray-300 mb-1">Email <span aria-hidden="true" class="text-red-500">*</span></label>
+                <input type="email" id="contact-email" name="Email" placeholder="your@email.com" required autocomplete="email" class="h-10 g-form-styles w-full" />
+                <p class="field-error" data-error-for="contact-email"></p>
+              </div>
+              <div class="mt-2">
+                <label for="contact-message" class="block text-[14px] font-semibold text-gray-700 dark:text-gray-300 mb-1">Message <span aria-hidden="true" class="text-red-500">*</span></label>
+                <textarea id="contact-message" name="Message" rows="5" placeholder="What would you like to say?" required class="pt-2 g-form-styles w-full"></textarea>
+                <p class="field-error" data-error-for="contact-message"></p>
+              </div>
+              <button type="submit" class="send-btn mt-3 mobile:w-full focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+                Send Message <i class="fa-solid fa-paper-plane ml-2" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-gray-800 dark:bg-gray-900 border border-gray-700/50 reveal">
+            <h3 class="contact-h2 text-white">Get in Touch</h3>
+            <hr class="hr-contact" aria-hidden="true" />
+            <div class="mt-6 space-y-4">
+              <div><h4 class="text-white font-semibold">Email</h4><a href="mailto:jabulanikapherachoka@gmail.com" class="normal-p text-gray-300 hover:text-orange-400 transition-colors break-all">jabulanikapherachoka@gmail.com</a></div>
+              <div><h4 class="text-white font-semibold">Phone</h4><a href="tel:+265896362899" class="normal-p text-gray-300 hover:text-orange-400 transition-colors">+(265) 896 362 899</a></div>
+              <div><h4 class="text-white font-semibold">Location</h4><p class="normal-p text-gray-300">Naperi, Blantyre, Malawi 🇲🇼</p></div>
+              <div><h4 class="text-white font-semibold">Availability</h4><p class="normal-p text-gray-300">Open to freelance and part-time opportunities</p></div>
+            </div>
+            <div class="mt-6 flex gap-3 flex-wrap">
+              <a href="https://github.com/Jabulani769" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Visit GitHub profile"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+              <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-md text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-[14px] text-gray-500 dark:text-gray-400">&copy; 2026 Jabulani Kapherachoka. Built with HTML, Tailwind CSS &amp; Vite.</p>
+      <nav class="flex items-center gap-5 text-[14px] font-medium" aria-label="Footer navigation">
+        <a href="#about" class="text-gray-500 dark:text-gray-400 hover:text-orange-500 transition-colors">About</a>
+        <a href="#portfolio" class="text-gray-500 dark:text-gray-400 hover:text-orange-500 transition-colors">Work</a>
+        <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="text-gray-500 dark:text-gray-400 hover:text-orange-500 transition-colors">Blog</a>
+        <a href="#contact-me" class="text-gray-500 dark:text-gray-400 hover:text-orange-500 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+  <div id="form-toast" role="status" aria-live="polite"></div>
+
+  <script src="index.js" defer></script>
 </body>
 </html>
