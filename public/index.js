@@ -127,6 +127,42 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ----------------------------------------------------------
+     ABOUT SPOTLIGHT — cards glow where the cursor is
+  ---------------------------------------------------------- */
+  if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
+    document.querySelectorAll(".about-card").forEach((card) => {
+      card.addEventListener("pointermove", (e) => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+        card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     SERVICES EXPAND — reveal the remaining services
+  ---------------------------------------------------------- */
+  const servicesToggle = document.getElementById("services-toggle");
+  const servicesLabel = document.getElementById("services-toggle-label");
+  const servicesIcon = document.getElementById("services-toggle-icon");
+
+  if (servicesToggle) {
+    servicesToggle.addEventListener("click", () => {
+      const extras = document.querySelectorAll(".extra-service");
+      const isHidden = extras[0]?.classList.contains("hidden");
+      extras.forEach((card) => card.classList.toggle("hidden", !isHidden));
+      servicesToggle.setAttribute("aria-expanded", String(isHidden));
+      if (servicesLabel) servicesLabel.textContent = isHidden ? "Show fewer services" : "Explore more services";
+      if (servicesIcon) {
+        servicesIcon.className = isHidden
+          ? "fa-solid fa-chevron-up text-xs transition-transform duration-300"
+          : "fa-solid fa-chevron-down text-xs transition-transform duration-300";
+      }
+      if (isHidden) extras[0]?.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "nearest" });
+    });
+  }
+
+  /* ----------------------------------------------------------
      SCROLLSPY — highlight active desktop nav link
   ---------------------------------------------------------- */
   const navLinks = document.querySelectorAll("[data-navlink]");

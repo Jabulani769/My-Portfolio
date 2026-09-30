@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
-  <title>Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer, Malawi</title>
+  <title>Jabulani Kapherachoka - Front-End &amp; Full-Stack Developer, Malawi</title>
   <meta name="description" content="Jabulani Kapherachoka is a front-end and full-stack developer based in Blantyre, Malawi. I build fast, practical web applications and digital products." />
   <meta name="author" content="Jabulani Kapherachoka" />
   <link rel="canonical" href="https://jabulani769.github.io/My-Portfolio/" />
@@ -13,13 +13,13 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jabulani769.github.io/My-Portfolio/" />
-  <meta property="og:title" content="Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer" />
+  <meta property="og:title" content="Jabulani Kapherachoka - Front-End &amp; Full-Stack Developer" />
   <meta property="og:description" content="I build fast, practical web applications and digital products from Malawi." />
   <meta property="og:image" content="https://jabulani769.github.io/My-Portfolio/assets/imgs/my-pic.webp" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Jabulani Kapherachoka — Front-End &amp; Full-Stack Developer" />
+  <meta name="twitter:title" content="Jabulani Kapherachoka - Front-End &amp; Full-Stack Developer" />
   <meta name="twitter:description" content="I build fast, practical web applications and digital products from Malawi." />
   <meta name="twitter:image" content="https://jabulani769.github.io/My-Portfolio/assets/imgs/my-pic.webp" />
 
@@ -65,7 +65,7 @@
     Skip to main content
   </a>
 
-  <!-- Header / Hero — single unified unit -->
+  <!-- Unified header + hero -->
   <header id="header1" class="relative">
 
     <!-- Desktop nav: transparent over hero, glass on scroll -->
@@ -197,61 +197,36 @@
     <!-- About -->
     <section id="about" aria-labelledby="about-heading" class="scroll-mt-20 py-14">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="reveal">
-          <p class="section-eyebrow">About</p>
-          <h2 id="about-heading" class="section-title">Developer with a business mindset</h2>
-          <p class="section-sub">Front-end &amp; full-stack developer based in Blantyre, Malawi — studying Business Management Information Systems, so I ship software with both the technical and business picture in mind.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-5 mt-8">
-          <div class="card-min reveal">
+        <div class="grid lg:grid-cols-2 gap-5 items-start">
+          <div class="reveal order-1 lg:order-2">
+            <p class="section-eyebrow">About</p>
+            <h2 id="about-heading" class="section-title">Developer with a business mindset</h2>
+            <p class="section-sub">I live in two worlds: I write the code, and I read the balance sheet. Self taught before college, now studying Business Management Information Systems at MCA, so I don't just ask "can we build it?" but "should we, and will it pay off?"<br class="mobile:hidden" /><br class="mobile:hidden" />
+            I build for small businesses and anyone with an idea: systems shaped by how people actually work, like GigRise, the freelance marketplace I'm building for Malawi, where vetted tech talent lands gigs and clients pay into escrow, so nobody gets burned.</p>
+          </div>
+          <div class="card-min about-card reveal order-2 lg:order-1">
             <div class="flex items-center gap-4 mb-4">
-              <div class="about-avatar" aria-hidden="true">
-                <img src="assets/imgs/my-pic.webp" alt="" width="56" height="56" loading="lazy" />
+              <div class="about-avatar-ring" aria-hidden="true">
+                <div class="about-avatar">
+                  <img src="assets/imgs/my-pic.webp" alt="" width="56" height="56" loading="lazy" />
+                </div>
+                <span class="about-online-dot"></span>
               </div>
               <div>
                 <h3 class="font-bold text-gray-900 dark:text-white leading-tight">Who am I?</h3>
                 <p class="text-[13px] text-gray-500 dark:text-gray-400">Blantyre, Malawi</p>
               </div>
             </div>
-            <p class="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">I build fast, practical web apps — clean interfaces, real-world systems, no bloat.</p>
+            <p class="text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">Part developer, part business mind. I turn messy processes into clean, working software. No bloat, no jargon, no wasted features. Understand the problem first, then ship something that earns its keep.</p>
+            <hr class="my-5 border-gray-100 dark:border-gray-800" aria-hidden="true" />
+            <h4 class="text-[12px] font-bold uppercase tracking-[0.16em] text-orange-500 mb-2">My Expertise</h4>
+            <dl class="grid tablet:grid-cols-2 gap-x-4 text-[14px]">
+              <div class="about-exp"><span class="about-exp-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span><div><dt class="font-semibold text-gray-900 dark:text-gray-100">Frontend</dt><dd class="text-gray-600 dark:text-gray-400">React · Next.js · TypeScript · Tailwind</dd></div></div>
+              <div class="about-exp"><span class="about-exp-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span><div><dt class="font-semibold text-gray-900 dark:text-gray-100">Backend</dt><dd class="text-gray-600 dark:text-gray-400">PHP · MySQL · Postgres · Redis</dd></div></div>
+              <div class="about-exp"><span class="about-exp-icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span><div><dt class="font-semibold text-gray-900 dark:text-gray-100">Languages</dt><dd class="text-gray-600 dark:text-gray-400">JavaScript · TypeScript · Python · SQL</dd></div></div>
+              <div class="about-exp"><span class="about-exp-icon"><i class="fa-solid fa-toolbox" aria-hidden="true"></i></span><div><dt class="font-semibold text-gray-900 dark:text-gray-100">Tools</dt><dd class="text-gray-600 dark:text-gray-400">Git · Linux · Vercel · Vite</dd></div></div>
+            </dl>
             <a href="https://drive.google.com/file/d/1YaKcPHknSNeddA83c4aqZhQbHNFCQ67U/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cv-btn inline-block focus:outline-none focus:ring-2 focus:ring-orange-500" aria-label="Download CV (opens in new tab)">Download My CV</a>
-          </div>
-
-          <div class="card-min reveal">
-            <div class="card-icon"><i class="fa-solid fa-address-card" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-gray-900 dark:text-white mb-3">Personal Info</h3>
-            <dl class="space-y-2 text-[14px]">
-              <div class="flex gap-2">
-                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Email</dt>
-                <dd><a href="mailto:jabulanikapherachoka@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors break-all">jabulanikapherachoka@gmail.com</a></dd>
-              </div>
-              <div class="flex gap-2">
-                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Phone</dt>
-                <dd><a href="tel:+265896362899" class="text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors">+(265) 896 362 899</a></dd>
-              </div>
-              <div class="flex gap-2">
-                <dt class="font-semibold text-gray-700 dark:text-gray-300 min-w-[64px]">Based</dt>
-                <dd class="text-gray-600 dark:text-gray-400">Naperi, Blantyre</dd>
-              </div>
-            </dl>
-            <div class="flex mt-5 gap-5" aria-label="Social media links">
-              <a href="https://www.linkedin.com/in/jabulani-kapherachoka-845636333" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-              <a href="https://github.com/Jabulani769" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
-              <a href="https://wa.me/qr/M4DC63LYPNZOF1" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-              <a href="https://www.instagram.com/jabulanikapherachoka" class="social-icons text-[20px] focus:outline-none focus:ring-2 focus:ring-orange-500 rounded" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            </div>
-          </div>
-
-          <div class="card-min reveal">
-            <div class="card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-gray-900 dark:text-white mb-3">My Expertise</h3>
-            <dl class="space-y-3 text-[14px]">
-              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Frontend</dt><dd class="text-gray-600 dark:text-gray-400">HTML · CSS · JavaScript · Tailwind</dd></div>
-              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Backend</dt><dd class="text-gray-600 dark:text-gray-400">PHP · MySQL</dd></div>
-              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Design</dt><dd class="text-gray-600 dark:text-gray-400">Figma → code</dd></div>
-              <div><dt class="font-semibold text-gray-900 dark:text-gray-100">Other</dt><dd class="text-gray-600 dark:text-gray-400">Git · Linux · C</dd></div>
-            </dl>
           </div>
         </div>
       </div>
@@ -262,29 +237,53 @@
       <div class="max-w-6xl mx-auto px-6">
         <div class="reveal">
           <p class="section-eyebrow">Services</p>
-          <h2 id="services-heading" class="section-title">What I can do for you</h2>
-          <p class="section-sub">Small, focused engagements — freelance and part-time. Clear scope, fast turnaround, clean handoff.</p>
+          <h2 id="services-heading" class="section-title">Technology built around the way your business works.</h2>
+          <p class="section-sub">I combine business understanding with software development to create digital solutions that solve practical problems, improve processes, and create better experiences for the people who use them.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-5 mt-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
           <div class="card-min reveal">
-            <div class="card-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-gray-900 dark:text-white">Frontend Development</h3>
-            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Responsive landing pages, portfolios and blogs. Semantic HTML, Tailwind, vanilla JS, performance-first.</p>
-            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind</span><span class="tech-tag">JavaScript</span></div>
+            <div class="card-icon"><i class="fa-solid fa-cube" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Digital Products &amp; Web Applications</h3>
+            <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mt-2">Turn an idea, service, or business process into a working digital product.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">I design and develop web applications that help businesses deliver services, manage information, connect with customers, and bring ideas to life.</p>
+            <p class="service-value"><span>Business value:</span> Less manual work · Better accessibility · Scalable operations</p>
           </div>
           <div class="card-min reveal">
-            <div class="card-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-gray-900 dark:text-white">Full-Stack PHP + MySQL</h3>
-            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Auth, CRUD, dashboards and small business systems with clean, maintainable backend code.</p>
-            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">CRUD</span></div>
+            <div class="card-icon"><i class="fa-solid fa-gears" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Business Systems &amp; Process Automation</h3>
+            <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mt-2">Replace repetitive processes with systems that work for you.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">I build internal systems, dashboards, and digital workflows around how your business actually operates, helping teams organize information, reduce repetitive work, and work more efficiently.</p>
+            <p class="service-value"><span>Business value:</span> Efficiency · Organization · Operational visibility</p>
           </div>
           <div class="card-min reveal">
-            <div class="card-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-gray-900 dark:text-white">Figma to Code</h3>
-            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">Pixel-faithful implementation of your designs — accessible, mobile-first, dark-mode ready.</p>
-            <div class="flex flex-wrap gap-1.5 mt-4"><span class="tech-tag">Figma</span><span class="tech-tag">Responsive</span><span class="tech-tag">A11y</span></div>
+            <div class="card-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Customer-Facing Websites</h3>
+            <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mt-2">Give your business a digital presence that works as hard as you do.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">I create professional websites that communicate your value clearly, build credibility, and guide visitors toward meaningful actions, whether that is making an enquiry, booking a service, or becoming a customer.</p>
+            <p class="service-value"><span>Business value:</span> Credibility · Customer acquisition · Clear communication</p>
+          </div>
+          <div class="card-min reveal extra-service hidden">
+            <div class="card-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Dashboards &amp; Data Solutions</h3>
+            <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mt-2">Turn business data into information you can actually use.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">I build dashboards and data-driven interfaces that bring important information together, making it easier to monitor operations, understand performance, and make informed decisions.</p>
+            <p class="service-value"><span>Business value:</span> Visibility · Decision-making · Operational control</p>
+          </div>
+          <div class="card-min reveal extra-service hidden lg:col-span-2">
+            <div class="card-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Digital Solution Consulting</h3>
+            <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200 leading-relaxed mt-2">Not sure what technology your business actually needs? Start with the problem.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 leading-relaxed mt-2">I help translate business requirements and operational challenges into practical technical solutions, identifying what should be built, how it should work, and which technologies make sense for the job.</p>
+            <p class="service-value"><span>Business value:</span> Clear direction · Practical solutions · Better technology decisions</p>
           </div>
         </div>
+        <div class="text-center mt-8 reveal">
+          <button id="services-toggle" aria-expanded="false" class="inline-flex items-center gap-2 text-[14px] font-semibold text-orange-500 border border-orange-500/40 px-5 py-2.5 rounded-full hover:bg-orange-500 hover:text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <span id="services-toggle-label">Explore more services</span>
+            <i id="services-toggle-icon" class="fa-solid fa-chevron-down text-xs transition-transform duration-300" aria-hidden="true"></i>
+          </button>
+        </div>
+        <p class="text-center text-[14px] text-gray-500 dark:text-gray-400 mt-8 reveal">Freelance and part-time. Blantyre + remote. <a href="#contact-me" class="font-semibold text-orange-500 hover:text-orange-600 transition-colors">Start with a conversation →</a></p>
       </div>
     </section>
 
@@ -307,7 +306,7 @@
               </div>
               <div class="timeline-item">
                 <p class="resume-h2">2023</p>
-                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">ICT Basics — Sanwecka</p>
+                <p class="text-[14px] font-semibold text-gray-800 dark:text-gray-200">ICT Basics, Sanwecka</p>
                 <p class="text-[14px] text-gray-600 dark:text-gray-400">Certificate in ICT and Microsoft Office Package.</p>
               </div>
             </div>
@@ -333,10 +332,10 @@
         <div class="card-min reveal mt-5">
           <h3 class="font-bold text-gray-900 dark:text-white">Tech Stack</h3>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-4">
-            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Frontend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Tailwind CSS</span></div></div>
-            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Backend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span></div></div>
-            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Languages</p><div class="flex flex-wrap gap-2"><span class="skill-tag">C</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div></div>
-            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Tools</p><div class="flex flex-wrap gap-2"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Linux</span><span class="skill-tag">Figma</span><span class="skill-tag">Vite</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Frontend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">React</span><span class="skill-tag">Next.js</span><span class="skill-tag">Tailwind CSS</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Backend</p><div class="flex flex-wrap gap-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">Redis</span><span class="skill-tag">Supabase</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Languages</p><div class="flex flex-wrap gap-2"><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">Python</span><span class="skill-tag">SQL</span></div></div>
+            <div><p class="text-[12px] uppercase tracking-widest text-orange-500 font-bold mb-2">Tools</p><div class="flex flex-wrap gap-2"><span class="skill-tag">Git</span><span class="skill-tag">GitHub</span><span class="skill-tag">Linux</span><span class="skill-tag">Vercel</span><span class="skill-tag">Vite</span></div></div>
           </div>
         </div>
       </div>
@@ -366,17 +365,11 @@
         <div class="reveal">
           <p class="section-eyebrow">Portfolio</p>
           <h2 id="portfolio-heading" class="section-title"><span class="text-orange-500">Selected </span>Work</h2>
-          <p class="section-sub">Real projects, real code. Each one includes a short case study — problem, solution, what I built.</p>
+          <p class="section-sub">Real projects, real code. Each one includes a short case study: problem, solution, what I built.</p>
         </div>
 
-        <div class="mt-6" role="tablist" aria-label="Portfolio categories">
-          <div class="flex flex-wrap gap-2 mb-6">
-            <button onclick="showCategory('all')" class="tab-btn active-tab" role="tab" aria-selected="true" aria-controls="portfolio-list" id="tab-all">All</button>
-            <button onclick="showCategory('web')" class="tab-btn" role="tab" aria-selected="false" aria-controls="portfolio-list" id="tab-web">Web</button>
-            <button onclick="showCategory('programming')" class="tab-btn" role="tab" aria-selected="false" aria-controls="portfolio-list" id="tab-programming">Programming</button>
-          </div>
-
-          <div id="portfolio-list" class="grid grid-cols-3 gap-6 mobile:grid-cols-1 tablet:grid-cols-2 pb-4" role="tabpanel" aria-labelledby="tab-all">
+        <div class="mt-6">
+          <div id="portfolio-list" class="grid grid-cols-3 gap-6 mobile:grid-cols-1 tablet:grid-cols-2 pb-4">
 
             <article class="project-card all web reveal" data-category="web" aria-label="Fully Responsive Blog Website project">
               <div class="project-img-wrap">
@@ -387,7 +380,7 @@
                   <h3 class="project-title">Fully Responsive Blog Website</h3>
                   <span class="project-badge">Live</span>
                 </div>
-                <p class="project-desc">A personal blog built with responsive design principles — readable on any device, with clean typography and fast load times.</p>
+                <p class="project-desc">A personal blog built with responsive design principles. Readable on any device, with clean typography and fast load times.</p>
                 <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
                 <details class="case-study-details">
                   <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
@@ -415,13 +408,13 @@
                   <h3 class="project-title">Portfolio Website</h3>
                   <span class="project-badge">Live</span>
                 </div>
-                <p class="project-desc">This portfolio — built from scratch with Tailwind CSS, Vite and vanilla JS. No frameworks, no templates.</p>
+                <p class="project-desc">This portfolio was built from scratch with Tailwind CSS, Vite and vanilla JS. No frameworks, no templates.</p>
                 <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">HTML</span><span class="tech-tag">Tailwind CSS</span><span class="tech-tag">Vite</span><span class="tech-tag">JavaScript</span></div>
                 <details class="case-study-details">
                   <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
                   <div class="case-study-body">
                     <p class="case-label">Problem</p>
-                    <p class="case-text">Needed a professional identity site that could demonstrate real frontend ability — not just list skills.</p>
+                    <p class="case-text">Needed a professional identity site that could demonstrate real frontend ability, not just list skills.</p>
                     <p class="case-label mt-2">Solution</p>
                     <p class="case-text">Built a performance-focused, accessible portfolio with dark mode, semantic HTML, and optimised assets.</p>
                     <p class="case-label mt-2">What I built</p>
@@ -430,36 +423,6 @@
                 </details>
                 <div class="project-links">
                   <a href="https://github.com/Jabulani769/My-Portfolio" target="_blank" rel="noopener noreferrer" class="project-link-primary focus:outline-none focus:ring-2 focus:ring-orange-500">GitHub <i class="fab fa-github text-xs" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </article>
-
-            <article class="project-card all programming reveal" data-category="programming" aria-label="Terminal-Based Voting System project">
-              <div class="project-img-wrap">
-                <img src="assets/imgs/vote.webp" alt="Screenshot of the terminal-based voting system" class="project-img" width="800" height="500" loading="lazy" />
-              </div>
-              <div class="project-body">
-                <div class="flex items-start justify-between gap-2 mb-2">
-                  <h3 class="project-title">Terminal-Based Voting System</h3>
-                  <span class="project-badge project-badge--lang">C</span>
-                </div>
-                <p class="project-desc">A command-line voting system built in C — handles voter registration, candidate management, vote tallying and result reporting.</p>
-                <div class="flex flex-wrap gap-1 mt-3 mb-4"><span class="tech-tag">C</span><span class="tech-tag">File I/O</span><span class="tech-tag">Structs</span><span class="tech-tag">CLI</span></div>
-                <details class="case-study-details">
-                  <summary class="case-study-summary">Case Study <i class="fa-solid fa-chevron-down text-xs ml-1" aria-hidden="true"></i></summary>
-                  <div class="case-study-body">
-                    <p class="case-label">Problem</p>
-                    <p class="case-text">Needed a project to demonstrate low-level programming concepts: memory, structs, file handling and system design.</p>
-                    <p class="case-label mt-2">Solution</p>
-                    <p class="case-text">Built a complete voting system in C with persistent storage, input validation and a clean terminal interface.</p>
-                    <p class="case-label mt-2">What I built</p>
-                    <ul class="case-list"><li>Voter registration and duplicate detection</li><li>Candidate management and vote tallying</li><li>Persistent file-based storage</li><li>Input validation and error handling</li><li>Result reporting with percentages</li></ul>
-                    <p class="case-label mt-2">Challenge</p>
-                    <p class="case-text">Managing memory safely in C without garbage collection — learned proper struct allocation, pointer arithmetic and file stream handling.</p>
-                  </div>
-                </details>
-                <div class="project-links">
-                  <a href="https://github.com/Jabulani769/voting_system" target="_blank" rel="noopener noreferrer" class="project-link-primary focus:outline-none focus:ring-2 focus:ring-orange-500">GitHub <i class="fab fa-github text-xs" aria-hidden="true"></i></a>
                 </div>
               </div>
             </article>
@@ -476,7 +439,7 @@
           <div>
             <p class="section-eyebrow">Writing</p>
             <h2 id="blog-heading" class="section-title">From the blog</h2>
-            <p class="section-sub">Notes on frontend, C programming and building in Malawi.</p>
+            <p class="section-sub">Notes on frontend, backend and building in Malawi.</p>
           </div>
           <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[14px] font-semibold text-orange-500 hover:text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded">View all posts <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i></a>
         </div>
@@ -488,15 +451,15 @@
             <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="card-min reveal block focus:outline-none focus:ring-2 focus:ring-orange-500">
-            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Programming</p>
-            <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">What C taught me about JavaScript</h3>
-            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">Memory, structs and file I/O — low-level lessons from my voting system that made me a better web dev.</p>
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Backend</p>
+            <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">What backend work taught me about frontend</h3>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">Validation, auth and database design. Server side lessons that made my interfaces better.</p>
             <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
           </a>
           <a href="https://jkblog.vercel.app" target="_blank" rel="noopener noreferrer" class="card-min reveal block focus:outline-none focus:ring-2 focus:ring-orange-500">
             <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-orange-500">Workflow</p>
             <h3 class="font-bold text-gray-900 dark:text-white mt-2 leading-snug">Tailwind tips for tiny teams</h3>
-            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">How I keep utility classes readable, themable and fast — without a component framework.</p>
+            <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">How I keep utility classes readable, themable and fast, without a component framework.</p>
             <span class="inline-flex items-center gap-1 text-[13px] font-semibold text-orange-500 mt-4">Read post <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></span>
           </a>
         </div>
@@ -522,10 +485,10 @@
               <h3 class="text-white font-bold text-[18px]">Personal Portfolio v2</h3>
               <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-400 rounded-full font-mono">Active</span>
             </div>
-            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">Upgrading this portfolio to 2026 standards — semantic HTML, accessibility, SEO, dark mode, compressed assets and case studies.</p>
+            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">Upgrading this portfolio to 2026 standards: semantic HTML, accessibility, SEO, dark mode, compressed assets and case studies.</p>
             <div class="flex flex-wrap gap-2"><span class="tech-tag-dark">HTML</span><span class="tech-tag-dark">Tailwind CSS</span><span class="tech-tag-dark">Vite</span><span class="tech-tag-dark">Accessibility</span></div>
             <div class="progress-track" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Portfolio v2 progress"><div class="progress-fill" data-progress="75"></div></div>
-            <p class="mt-2 text-[12px] text-gray-500">75% — polish &amp; content pass</p>
+            <p class="mt-2 text-[12px] text-gray-500">75% done: polish and content pass</p>
           </div>
 
           <div class="building-card reveal">
@@ -533,10 +496,10 @@
               <h3 class="text-white font-bold text-[18px]">PHP + MySQL Web App</h3>
               <span class="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full font-mono">Planning</span>
             </div>
-            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">A full-stack web application using PHP and MySQL — authentication, CRUD operations, and a clean Tailwind interface.</p>
+            <p class="text-gray-400 text-[14px] leading-relaxed mb-3">A full-stack web application using PHP and MySQL, with authentication, CRUD operations, and a clean Tailwind interface.</p>
             <div class="flex flex-wrap gap-2"><span class="tech-tag-dark">PHP</span><span class="tech-tag-dark">MySQL</span><span class="tech-tag-dark">Tailwind CSS</span></div>
             <div class="progress-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" aria-label="PHP app progress"><div class="progress-fill" data-progress="20"></div></div>
-            <p class="mt-2 text-[12px] text-gray-500">20% — scope &amp; schema design</p>
+            <p class="mt-2 text-[12px] text-gray-500">20% done: scope and schema design</p>
           </div>
         </div>
       </div>

@@ -177,7 +177,7 @@
   50%       { opacity: 0; }
 }
 
-/* Divider line — gradient glow tying role to tagline */
+/* Divider line - gradient glow tying role to tagline */
 .hero-divider {
   width: 64px;
   height: 2px;
@@ -187,7 +187,7 @@
   border-radius: 2px;
 }
 
-/* Tagline — balanced with name/role: brighter, breathing room, soft shadow */
+/* Tagline - balanced with name/role: brighter, breathing room, soft shadow */
 .hero-tagline {
   font-size: 1.06rem;
   font-weight: 400;
@@ -209,7 +209,7 @@
   text-underline-offset: 4px;
 }
 
-/* Location — quiet chip echoing the availability badge */
+/* Location - quiet chip echoing the availability badge */
 .hero-location {
   display: inline-flex;
   align-items: center;
@@ -715,6 +715,26 @@ body {
   @apply w-10 h-10 rounded-xl flex items-center justify-center bg-orange-500/10 text-orange-500 text-lg mb-4;
 }
 
+/* Service business-value line */
+.service-value {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4b5563;
+  background: rgba(249,115,22,0.07);
+  border-left: 3px solid #f97316;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.9rem;
+}
+.dark .service-value {
+  color: #9ca3af;
+  background: rgba(249,115,22,0.08);
+}
+.service-value span {
+  font-weight: 700;
+  color: #f97316;
+}
+
 /* Sticky glass nav */
 .nav-glass {
   position: sticky;
@@ -733,7 +753,7 @@ body {
   color: #f97316 !important;
 }
 
-/* Hero refinements — fluid type, pill badge */
+/* Hero refinements - fluid type, pill badge */
 .hero-name {
   font-size: clamp(2.75rem, 6vw, 4.25rem);
   line-height: 1.02;
@@ -775,7 +795,7 @@ body {
   .hero-scroll-hint { display: none; }
 }
 
-/* Hero entrance — staggered rise, triggered by body.loaded */
+/* Hero entrance - staggered rise, triggered by body.loaded */
 .hero-anim {
   opacity: 0;
   transform: translateY(24px);
@@ -789,7 +809,7 @@ body.loaded .hero-anim {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* CTA polish — glow + lift */
+/* CTA polish - glow + lift */
 .hero-btn-primary {
   box-shadow: 0 8px 24px rgba(249,115,22,0.35);
 }
@@ -917,6 +937,98 @@ body.loaded .hero-anim {
 .dark .about-avatar { border-color: #1f2937; }
 .about-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 
+/* About magic: rotating gradient ring + online dot (avatar stays still) */
+.about-avatar-ring {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.about-avatar-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: conic-gradient(from 0deg, #f97316, #fbbf24, #fb7185, #f97316);
+  animation: spin-ring 5s linear infinite;
+}
+.about-avatar-ring .about-avatar {
+  position: absolute;
+  inset: 3px;
+  width: auto;
+  height: auto;
+  border: 2px solid #ffffff;
+}
+.dark .about-avatar-ring .about-avatar { border-color: #111827; }
+@keyframes spin-ring {
+  to { transform: rotate(360deg); }
+}
+.about-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #22c55e;
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 0 10px rgba(34,197,94,0.8);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+.dark .about-online-dot { border-color: #111827; }
+
+/* About magic: cursor spotlight on cards */
+.about-card {
+  position: relative;
+  overflow: hidden;
+}
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(249,115,22,0.1), transparent 65%);
+  pointer-events: none;
+}
+.about-card:hover::before { opacity: 1; }
+
+/* About magic: expertise rows */
+.about-exp {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem;
+  margin: 0 -0.5rem;
+  border-radius: 0.75rem;
+  transition: background 0.25s ease, transform 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+.about-exp:hover {
+  background: rgba(249,115,22,0.07);
+  transform: translateX(4px);
+}
+.about-exp-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 0.65rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #f97316;
+  background: rgba(249,115,22,0.1);
+  border: 1px solid rgba(249,115,22,0.2);
+  transition: background 0.25s, transform 0.25s;
+}
+.about-exp:hover .about-exp-icon {
+  background: #f97316;
+  color: #ffffff;
+  transform: scale(1.05) rotate(-4deg);
+}
+
 /* Timeline (resume) */
 .timeline { position: relative; padding-left: 1.4rem; }
 .timeline::before {
@@ -1037,13 +1149,15 @@ body.loaded .hero-anim {
 }
 .g-form-styles.invalid { border-color: #f87171 !important; }
 
-/* Reduced motion — disable reveal/progress/counters animation */
+/* Reduced motion - disable reveal/progress/counters animation */
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero-anim { opacity: 1 !important; transform: none !important; }
   body.loaded .hero-anim { animation: none !important; }
   .hero-code-inner { animation: none; }
   .hero-code-caret { animation: none; }
+  .about-avatar-ring::before { animation: none; }
+  .about-card::before { display: none; }
   .progress-fill { transition: none; }
   html { scroll-behavior: auto; }
 }
