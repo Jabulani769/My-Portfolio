@@ -80,22 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ----------------------------------------------------------
-     PORTFOLIO TABS
-  ---------------------------------------------------------- */
-  window.showCategory = function (category) {
-    document.querySelectorAll(".project-card").forEach((card) => {
-      card.classList.toggle("hidden", !(category === "all" || card.classList.contains(category)));
-    });
-    document.querySelectorAll(".tab-btn").forEach((btn) => {
-      const btnCategory = btn.getAttribute("onclick")?.match(/'([^']+)'/)?.[1];
-      const isActive = btnCategory === category;
-      btn.classList.toggle("active-tab", isActive);
-      btn.setAttribute("aria-selected", String(isActive));
-    });
-  };
-  showCategory("all");
-
-  /* ----------------------------------------------------------
      TYPEWRITER EFFECT
   ---------------------------------------------------------- */
   const typewriterEl = document.getElementById("typewriter");
@@ -184,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ----------------------------------------------------------
-     REVEAL ON SCROLL + PROGRESS BARS
+     REVEAL ON SCROLL
   ---------------------------------------------------------- */
   const revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && !prefersReducedMotion) {
@@ -195,55 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => revealer.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("visible"));
-  }
-
-  const progressFills = document.querySelectorAll(".progress-fill[data-progress]");
-  function fillBars() {
-    progressFills.forEach((bar) => {
-      bar.style.width = `${bar.getAttribute("data-progress")}%`;
-    });
-  }
-  if ("IntersectionObserver" in window && !prefersReducedMotion) {
-    const barObs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && (fillBars(), barObs.disconnect())),
-      { threshold: 0.3 }
-    );
-    const building = document.getElementById("currently-building");
-    if (building) barObs.observe(building);
-    else fillBars();
-  } else {
-    fillBars();
-  }
-
-  /* ----------------------------------------------------------
-     ANIMATED COUNTERS
-  ---------------------------------------------------------- */
-  const counters = document.querySelectorAll("[data-count]");
-  function animateCounter(el) {
-    const target = parseInt(el.getAttribute("data-count"), 10);
-    if (Number.isNaN(target)) return;
-    if (prefersReducedMotion) {
-      el.textContent = String(target);
-      return;
-    }
-    const duration = 1200;
-    const start = performance.now();
-    function tick(now) {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
-      if (p < 1) requestAnimationFrame(tick);
-    }
-    requestAnimationFrame(tick);
-  }
-  if ("IntersectionObserver" in window) {
-    const cObs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && (animateCounter(e.target), cObs.unobserve(e.target))),
-      { threshold: 0.5 }
-    );
-    counters.forEach((c) => cObs.observe(c));
-  } else {
-    counters.forEach(animateCounter);
   }
 
   /* ----------------------------------------------------------
