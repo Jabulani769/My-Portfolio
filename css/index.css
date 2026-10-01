@@ -73,6 +73,7 @@
   display: flex;
   align-items: center;
   padding-top: 72px;
+  overflow: clip;
 }
 
 /* Unified header: full-viewport hero under transparent nav */
@@ -688,6 +689,10 @@ body {
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+html, body {
+  overflow-x: clip;
 }
 
 /* Section eyebrow + title */
