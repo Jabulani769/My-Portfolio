@@ -353,6 +353,26 @@
 #mobile-bar.nav-scrolled .site-logo { color: #111827; }
 .dark #mobile-bar.nav-scrolled .site-logo { color: #f9fafb; }
 
+/* Mobile menu: slide-down open/close + scroll-lock + desktop guard */
+#mobile-menu {
+  transform: translateY(-8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.2s ease, visibility 0s linear 0.25s;
+}
+#mobile-menu.is-open {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.2s ease;
+}
+@media (min-width: 768px) {
+  #mobile-menu { display: none !important; }
+}
+body.menu-open { overflow: hidden; }
+
 /* Icon buttons that adapt to transparent vs scrolled */
 .nav-icon-btn {
   display: inline-flex;
@@ -609,6 +629,25 @@ body.loaded .hero-anim {
     padding: 0;
   }
 }
+/* Mobile hero: left-aligned text in a centered block with equal side margins.
+   Authoritative — placed after base/grid/fluid-type rules so it wins at equal specificity. */
+@media (max-width: 767px) {
+  .hero-grid { padding: 0; justify-items: center; }
+  .hero-grid .hero-content { max-width: 100%; }
+  .hero-content {
+    margin-inline: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-badge { align-self: flex-start; justify-content: flex-start; flex-wrap: wrap; max-width: 100%; }
+  .hero-name { font-size: clamp(2.5rem, 11vw, 3rem); max-width: 100%; overflow-wrap: break-word; }
+  .hero-role { justify-content: flex-start; flex-wrap: wrap; max-width: 100%; }
+  .hero-divider { margin-inline: 0; }
+  .hero-tagline { text-wrap: pretty; max-width: 100%; }
+  .hero-ctas { align-items: stretch; width: 100%; }
+}
 
 /* Code window card */
 .hero-code { display: none; margin: 0; }
@@ -837,5 +876,6 @@ body.loaded .hero-anim {
   .hero-code-caret { animation: none; }
   .about-avatar-ring::before { animation: none; }
   .about-card::before { display: none; }
+  #mobile-menu, #mobile-menu.is-open { transition: none; transform: none; }
   html { scroll-behavior: auto; }
 }

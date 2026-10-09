@@ -57,25 +57,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenu = document.getElementById("mobile-menu");
   const menuIcon = document.getElementById("menu-icon");
 
+  function isMenuOpen() {
+    return !!mobileMenu && mobileMenu.classList.contains("is-open");
+  }
+
   function setMenu(open) {
     if (!mobileMenu || !menuBtn) return;
-    mobileMenu.classList.toggle("hidden", !open);
+    clearTimeout(setMenu._hideTimer);
+    if (open) {
+      mobileMenu.classList.remove("hidden");
+      // Force reflow so the slide-down transition runs from the hidden state.
+      void mobileMenu.offsetWidth;
+      mobileMenu.classList.add("is-open");
+      document.body.classList.add("menu-open");
+    } else {
+      mobileMenu.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+      // Re-apply display:none after the slide-up finishes so the hidden
+      // panel never intercepts clicks. Skip the wait for reduced motion.
+      if (prefersReducedMotion) {
+        mobileMenu.classList.add("hidden");
+      } else {
+        setMenu._hideTimer = setTimeout(() => {
+          if (!isMenuOpen()) mobileMenu.classList.add("hidden");
+        }, 260);
+      }
+    }
     menuBtn.setAttribute("aria-expanded", String(open));
     menuBtn.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
-    if (menuIcon) menuIcon.className = open ? "fa fa-times text-orange-500 text-xl" : "fa fa-bars text-orange-500 text-xl";
+    if (menuIcon) menuIcon.className = open ? "fa-solid fa-xmark text-orange-500 text-xl" : "fa-solid fa-bars text-orange-500 text-xl";
   }
 
   if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => setMenu(mobileMenu.classList.contains("hidden")));
+    menuBtn.addEventListener("click", () => setMenu(!isMenuOpen()));
     mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+      if (e.key === "Escape" && isMenuOpen()) {
         setMenu(false);
         menuBtn.focus();
       }
     });
     document.addEventListener("click", (e) => {
-      if (!mobileMenu.classList.contains("hidden") && !menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) setMenu(false);
+      if (isMenuOpen() && !menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) setMenu(false);
+    });
+    // Reset stale open state (icon, ARIA, scroll-lock) when moving to desktop,
+    // where CSS force-hides the panel.
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768 && isMenuOpen()) setMenu(false);
     });
   }
 
@@ -83,10 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
      TYPEWRITER EFFECT
   ---------------------------------------------------------- */
   const typewriterEl = document.getElementById("typewriter");
-  const phrases = ["Backend Developer", "Software Developer", "Full-Stack Developer", "Front-End Developer"];
+  const phrases = ["Backend Developer", "Software Developer", "Full-Stack Developer", "Front-End Developer", "Business Analyst"];
   let phraseIndex = 0;
   let charIndex = phrases[0].length;
-  let isDeleting = false;
+  let isDeleting = true;
 
   function typeLoop() {
     if (!typewriterEl) return;
@@ -94,10 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
     charIndex += isDeleting ? -1 : 1;
     typewriterEl.textContent = currentPhrase.substring(0, charIndex);
     let delay = isDeleting ? 40 : 80;
-    if (!isDeleting && charIndex === currentPhrase.length) {
+    if (!isDeleting && charIndex >= currentPhrase.length) {
       delay = 1100;
       isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
+    } else if (isDeleting && charIndex <= 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
       delay = 180;
